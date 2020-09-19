@@ -33,9 +33,12 @@
     "warning": "^3.0.0"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.25",
     "@types/node": "^10.0.0",
     "@types/react": "^15.6.6",
     "@types/react-dom": "^0.14.22",
+    "@commitlint/cli": "^7.3.2",
+    "@commitlint/config-conventional": "^7.3.1",
     "antd": "^2.7.4",
     "core-js": "3",
     "brain-store": "^0.1.10-rc.1",
@@ -49,7 +52,9 @@
     "react-dom": "^15.4.2",
     "legions-nprogress": "^0.0.5",
     "reflect-metadata": "^0.1.13",
-    "legions-rpc-cli": "^0.0.7"
+    "legions-rpc-cli": "^0.0.8",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0"
   },
   "directories": {
     "lib": "lib",
@@ -73,7 +78,7 @@
     "not op_mini all"
   ],
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
+    "test": "jest",
     "build": "legions-rpc rpc -c",
     "builds": "npm run build:main",
     "build:main": "node build/build.main.js",

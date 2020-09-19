@@ -3110,7 +3110,7 @@ ini@^1.3.4:
   resolved "https://registry.npm.taobao.org/ini/download/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
   integrity sha1-7uJfVtscnsYIXgwid4CD9Zar+Sc=
 
-invariant@^2.2.0, invariant@^2.2.1, invariant@^2.2.2, invariant@^2.2.4:
+invariant@^2.2.0, invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
@@ -3878,10 +3878,10 @@ left-pad@^1.3.0:
   resolved "https://registry.npm.taobao.org/left-pad/download/left-pad-1.3.0.tgz#5b8a3a7765dfe001261dde915589e782f8c94d1e"
   integrity sha1-W4o6d2Xf4AEmHd6RVYnngvjJTR4=
 
-legions-rpc-cli@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.npm.taobao.org/legions-rpc-cli/download/legions-rpc-cli-0.0.7.tgz?cache=0&sync_timestamp=1600415374339&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flegions-rpc-cli%2Fdownload%2Flegions-rpc-cli-0.0.7.tgz#65ec658af51dd296380184e97229b694f36439dd"
-  integrity sha1-ZexlivUd0pY4AYTpcim2lPNkOd0=
+legions-rpc-cli@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/legions-rpc-cli/-/legions-rpc-cli-0.0.8.tgz#93490dd2c55f48f33493a889ce00106305acd74c"
+  integrity sha512-GN2OIVsN/zgiEdJzgdE18lCMfwTslub1KWDeiCpdIJc4csugiB7Jcm4JZmacxwCkjjcXAn13Qs88godwg/vufg==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/plugin-proposal-decorators" "^7.8.3"
@@ -3890,18 +3890,12 @@ legions-rpc-cli@^0.0.7:
     "@babel/preset-env" "^7.6.2"
     "@babel/preset-es2015" "^7.0.0-beta.53"
     "@babel/preset-stage-2" "^7.8.3"
-    "@commitlint/cli" "^7.3.2"
-    "@commitlint/config-conventional" "^7.3.1"
-    "@types/jest" "^24.0.25"
     "@types/node" "^10.0.0"
     babel-loader "^8.0.6"
     chalk "^2.0.1"
     commander "^2.11.0"
     core-js "3"
     deep-assign "^2.0.0"
-    husky "^1.3.1"
-    invariant "^2.2.1"
-    jest "^24.9.0"
     rollup "^2.26.11"
     rollup-plugin-babel "^4.4.0"
     rollup-plugin-buble "^0.19.6"
@@ -3911,7 +3905,6 @@ legions-rpc-cli@^0.0.7:
     rollup-plugin-typescript2 "^0.27.2"
     rollup-plugin-uglify "^6.0.4"
     ts-import-plugin "^1.5.5"
-    ts-jest "^24.2.0"
     ts-loader "^8.0.2"
     typescript "^4.0.2"
     uglify-js "^3.1.2"
