@@ -1,0 +1,55 @@
+{
+  "name": "legions-utils-tool",
+  "version": "0.0.7",
+  "description": "常用工具类操作方法",
+  "keywords": [
+    "utils",
+    "tool",
+    "legions-utils-tool"
+  ],
+  "author": "duanguang <18520583569@163.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "dist/legions-utils-tool.umd.js",
+  "typings": "types/index.d.ts",
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "legions-rpc-cli": "^0.0.7",
+    "core-js": "3",
+    "invariant": "^2.2.1"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist",
+    "types",
+    "cookie",
+    "debounce",
+    "dom",
+    "download",
+    "format.date",
+    "format.string",
+    "invariant",
+    "object.utils",
+    "regex",
+    "storage",
+    "taro.request",
+    "type.validation",
+    "vue.store"
+  ],
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 9",
+    "not op_mini all"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "legions-rpc rpc -c",
+    "build:main": "node build/build.main.js",
+    "release": "bash build/release.sh"
+  },
+  "gitHead": "1e80f0ebb53edb8e9ecaa46efa41e0442e9d1716"
+}

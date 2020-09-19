@@ -1,0 +1,43 @@
+{
+  "name": "legions-decorator",
+  "version": "0.0.2",
+  "description": "> 常用修饰器集合，如表单规则修饰器等",
+  "keywords": [
+    "form-decorator",
+    "decorator",
+    "legions-decorator"
+  ],
+  "author": "duanguang <18520583569@163.com>",
+  "homepage": "https://github.com/duanguang/lerna-legion-library.git",
+  "license": "MIT",
+  "main": "dist/legions-mobx-decorator.esm.js",
+  "module": "dist/legions-mobx-decorator.esm.js",
+  "typings": "types/index.d.ts",
+  "peerDependencies": {},
+  "dependencies": {
+    "reflect-metadata": "^0.1.13",
+    "legions-utils-tool": "^0.0.6",
+    "warning": "^3.0.0"
+  },
+  "devDependencies": {
+    "legions-rpc-cli": "^0.0.7",
+    "core-js": "3",
+    "history": "^4.7.2"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist",
+    "types",
+    "async.validator"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "legions-rpc rpc -c",
+    "build:main": "node build/build.main.js",
+    "release": "bash build/release.sh"
+  },
+  "gitHead": "1e80f0ebb53edb8e9ecaa46efa41e0442e9d1716"
+}
