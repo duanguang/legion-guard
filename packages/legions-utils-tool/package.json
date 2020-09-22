@@ -23,6 +23,7 @@
     "legions-rpc-cli": "^0.0.8",
     "invariant": "^2.2.1",
     "jest": "^24.9.0",
+    "jsdom":"^16.4.0",
     "ts-jest": "^24.2.0"
   },
   "directories": {
