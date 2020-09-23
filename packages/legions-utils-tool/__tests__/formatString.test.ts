@@ -57,5 +57,7 @@ describe('测试公用工具类', () => {
         expect(getStringLen('0')).toEqual(1)
         expect(getStringLen('A')).toEqual(1)
         expect(getStringLen('中文，')).toEqual(6)
+        expect(getStringLen('{}')).toEqual(2)
+        expect(getStringLen('1')).toEqual(1)
     })
 });
