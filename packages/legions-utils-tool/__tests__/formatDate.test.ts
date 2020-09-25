@@ -31,11 +31,14 @@ describe('测试公用工具类', () => {
         global['__DEV__'] = process.env.NODE_ENV !== 'production'
         // Tue May 04 1976 03:32:03 GMT+0800 (中国标准时间)
         const date = '2020-09-24 10:30:12'
+        let day = new Date().getTime()+20000000
         // @ts-ignore
-        expect(formatDateToFriendly(date)).toStrictEqual('10:30')
+        expect(formatDateToFriendly(day)).toStrictEqual(formatDate(new Date(day), 'HH:mm'))
+        // @ts-ignore
+        expect(formatDateToFriendly(date)).toStrictEqual('9月24日')
         // @ts-ignore
         expect(formatDateToFriendly()).toStrictEqual('刚刚')
-        expect(formatDateToFriendly(new Date(date))).toStrictEqual('10:30')
+        expect(formatDateToFriendly(new Date(date))).toStrictEqual('9月24日')
         expect(formatDateToFriendly(new Date())).toStrictEqual('刚刚')
         expect(formatDateToFriendly(new Date('2020-09-23 10:30:12'))).toStrictEqual('9月23日')
         expect(formatDateToFriendly(new Date(new Date().getFullYear()))).toStrictEqual('1970年1月1')
