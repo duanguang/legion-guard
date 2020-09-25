@@ -28,9 +28,9 @@ export function RegExChk(type: RegExp | validatorTypeEnum, value: string) {
   let regex;
   switch (type) {
     //@ts-ignore
-    case type instanceof RegExp:
+   /*  case type instanceof RegExp:
       regex = type;
-      return regex.test($pintu);
+      return regex.test($pintu); */
     //@ts-ignore
     case validatorType.required:
       regex = /[^(^\s*)|(\s*$)]/;
@@ -45,7 +45,7 @@ export function RegExChk(type: RegExp | validatorTypeEnum, value: string) {
       return regex.test($pintu);
     //@ts-ignore
     case validatorType.integer:
-      regex = /^[-\+]?\d$/; //正负整数
+      regex = /^[-\+]?\d*$/; //正负整数
       return regex.test($pintu);
     //@ts-ignore
     case validatorType.plusInteger:
@@ -110,7 +110,8 @@ export function RegExChk(type: RegExp | validatorTypeEnum, value: string) {
       regex = /^[1-9]\d{5}$/;
       return regex.test($pintu);
     default:
-      return false;
+      regex = type;
+      return regex.test($pintu);
   }
 }
 export let validatorType: validatorTypeEnum;
@@ -141,8 +142,8 @@ export const commonRegex = {
   REQUIRED: /[^(^\s*)|(\s*$)]/,
   CHINESE: /^[\u0391-\uFFE5]+$/,
   NUMBER: /^[\d]+$/, //或者/^\d+$/
-  INTEGER: /^[-\+]?\d$/, //正负整数
-  PLUSINTEGER: /^[+]?\d$/,
+  INTEGER: /^[-\+]?\d*$/, //正负整数
+  PLUSINTEGER: /^[+]?\d*$/,
   DOUBLE: /^[-\+]?\d+(\.\d+)?$/,
   PLUSDOUBLE: /[+]?\d+(\.\d+)?$/,
   ENGLISH: /^[A-Z a-z]+$/,
