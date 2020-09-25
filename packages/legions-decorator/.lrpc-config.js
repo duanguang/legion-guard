@@ -31,5 +31,13 @@ module.exports = {
       banner: 'legions-decorator',
       outputName: 'legionsDecorator',
     },
+    {
+      name: 'umdenumplus',
+      input: resolves('src/enum.plus/index.ts'),
+      file: resolves('enum.plus/index.js'),
+      format: 'umd',
+      banner: 'legions-decorator',
+      outputName: 'legionsDecorator',
+    },
   ],
 };

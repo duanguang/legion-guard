@@ -29,9 +29,9 @@
         "skipLibCheck": true,
         "allowSyntheticDefaultImports": true,
         "stripInternal": true,
-        "emitDecoratorMetadata": false,
-        "experimentalDecorators": false,
-        "strictPropertyInitialization": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "strictPropertyInitialization": false,
         /* "typeRoots": ["./types"], */
         "importHelpers": true,
         "sourceMap": true,

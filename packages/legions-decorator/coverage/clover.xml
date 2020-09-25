@@ -1,18 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1600523962766" clover="3.2.0">
-  <project timestamp="1600523962766" name="All files">
-    <metrics statements="9" coveredstatements="5" conditionals="16" coveredconditionals="3" methods="3" coveredmethods="2" elements="28" coveredelements="10" complexity="0" loc="9" ncloc="9" packages="1" files="1" classes="1"/>
-    <file name="legions-mobx-decorator.esm.js" path="/Users/duanguang/Documents/Front-End/legions/legion-guard/packages/legions-decorator/dist/legions-mobx-decorator.esm.js">
-      <metrics statements="9" coveredstatements="5" conditionals="16" coveredconditionals="3" methods="3" coveredmethods="2"/>
-      <line num="6" count="1" type="stmt"/>
-      <line num="7" count="1" type="cond" truecount="3" falsecount="1"/>
-      <line num="12" count="1" type="stmt"/>
-      <line num="22" count="0" type="cond" truecount="0" falsecount="4"/>
-      <line num="23" count="0" type="stmt"/>
-      <line num="26" count="0" type="stmt"/>
-      <line num="28" count="0" type="stmt"/>
-      <line num="31" count="1" type="stmt"/>
-      <line num="33" count="1" type="stmt"/>
+<coverage generated="1601004917055" clover="3.2.0">
+  <project timestamp="1601004917055" name="All files">
+    <metrics statements="42" coveredstatements="42" conditionals="33" coveredconditionals="33" methods="11" coveredmethods="11" elements="86" coveredelements="86" complexity="0" loc="42" ncloc="42" packages="1" files="1" classes="1"/>
+    <file name="index.ts" path="/Users/linzeqin/project/library/legion-guard/packages/legions-decorator/src/enum.plus/index.ts">
+      <metrics statements="42" coveredstatements="42" conditionals="33" coveredconditionals="33" methods="11" coveredmethods="11"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="30" count="12" type="stmt"/>
+      <line num="31" count="12" type="stmt"/>
+      <line num="39" count="1" type="stmt"/>
+      <line num="40" count="241" type="stmt"/>
+      <line num="49" count="1" type="stmt"/>
+      <line num="50" count="177" type="stmt"/>
+      <line num="52" count="1" type="stmt"/>
+      <line num="74" count="1" type="stmt"/>
+      <line num="75" count="12" type="stmt"/>
+      <line num="76" count="12" type="stmt"/>
+      <line num="89" count="1" type="stmt"/>
+      <line num="97" count="1" type="stmt"/>
+      <line num="98" count="3" type="stmt"/>
+      <line num="99" count="11" type="stmt"/>
+      <line num="100" count="11" type="cond" truecount="4" falsecount="0"/>
+      <line num="101" count="2" type="stmt"/>
+      <line num="104" count="1" type="stmt"/>
+      <line num="113" count="1" type="stmt"/>
+      <line num="114" count="3" type="stmt"/>
+      <line num="115" count="11" type="stmt"/>
+      <line num="116" count="11" type="cond" truecount="4" falsecount="0"/>
+      <line num="117" count="2" type="stmt"/>
+      <line num="120" count="1" type="stmt"/>
+      <line num="130" count="1" type="stmt"/>
+      <line num="131" count="10" type="stmt"/>
+      <line num="132" count="112" type="stmt"/>
+      <line num="133" count="112" type="stmt"/>
+      <line num="134" count="112" type="cond" truecount="2" falsecount="0"/>
+      <line num="138" count="63" type="cond" truecount="5" falsecount="0"/>
+      <line num="142" count="45" type="cond" truecount="5" falsecount="0"/>
+      <line num="146" count="36" type="cond" truecount="5" falsecount="0"/>
+      <line num="149" count="33" type="stmt"/>
+      <line num="150" count="33" type="stmt"/>
+      <line num="152" count="33" type="cond" truecount="4" falsecount="0"/>
+      <line num="153" count="20" type="stmt"/>
+      <line num="156" count="112" type="cond" truecount="2" falsecount="0"/>
+      <line num="157" count="80" type="cond" truecount="2" falsecount="0"/>
+      <line num="158" count="60" type="stmt"/>
+      <line num="162" count="13" type="stmt"/>
+      <line num="168" count="10" type="stmt"/>
+      <line num="170" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

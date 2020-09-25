@@ -42,6 +42,7 @@
   ],
   "scripts": {
     "test": "jest",
+    "test:enum": "jest --watch ./__tests__/enum.plus.test.ts",
     "build": "legions-rpc rpc -c",
     "build:main": "node build/build.main.js",
     "release": "bash build/release.sh"
