@@ -88,6 +88,7 @@ export function promiseTry(fn: Function) {
     try {
       resolve(fn());
     } catch (err) {
+      console.log(err,'err')
       reject(err);
     }
   });

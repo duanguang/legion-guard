@@ -54,7 +54,7 @@
     "not op_mini all"
   ],
   "scripts": {
-    "test": "jest --watch ./packages/legions-utils-tool/__tests__/regex.test.ts",
+    "test": "jest --watch ./packages/legions-utils-tool/__tests__/objectUtils.test.ts",
     "build": "legions-rpc rpc -c",
     "build:main": "node build/build.main.js",
     "release": "bash build/release.sh"
