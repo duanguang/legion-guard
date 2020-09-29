@@ -96,7 +96,7 @@ export function formatDateToFriendly(date: Date) {
       : date;
   invariant(date instanceof Date, 'date is not date type');
   let now = new Date();
-  if (now.getTime() - date.getTime() < 60 * 1000) return '刚刚'; // 1分钟以内视作“刚刚”
+  if ((now.getTime() - date.getTime())< 60 * 1000 && (now.getTime() - date.getTime())>=0) return '刚刚'; // 1分钟以内视作“刚刚”
   let temp = formatDate(date, 'yyyy年M月d');
   if (temp == formatDate(now, 'yyyy年M月d')) return formatDate(date, 'HH:mm');
   if (date.getFullYear() == now.getFullYear())

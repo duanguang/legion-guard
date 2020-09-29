@@ -23,6 +23,7 @@
     "legions-rpc-cli": "^0.0.8",
     "invariant": "^2.2.1",
     "jest": "^24.9.0",
+    "jsdom":"^16.4.0",
     "ts-jest": "^24.2.0"
   },
   "directories": {
@@ -53,7 +54,7 @@
     "not op_mini all"
   ],
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch ./packages/legions-utils-tool/__tests__/debounce.test.ts",
     "build": "legions-rpc rpc -c",
     "build:main": "node build/build.main.js",
     "release": "bash build/release.sh"
