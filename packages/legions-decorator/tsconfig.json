@@ -3,6 +3,7 @@
         "declaration": true,
         "declarationDir": "./types",
         "module": "esnext",
+        "types": ["jest", "node"],
         /*  "noImplicitAny": true, */
         "outDir": "./dist",
         "target": "es5",
@@ -40,9 +41,10 @@
         "noImplicitThis": true,
         "alwaysStrict": true,
     },
-    "include": [
-        "src/**/*"
-    ],
+    "include": ["src/**/*", "__tests__/**/*"],
+    // "include": [
+    //     "src/**/*"
+    // ],
     "exclude": [
         "node_modules",
         "dist",

@@ -35,7 +35,7 @@ export declare function EnumDesc(code: EnumType, value: EnumType): (target: Obje
  * @export
  * @class EnumPlus
  */
-export declare class EnumPlus {
+declare class EnumPlus {
     /**
      * 根据传入的value获取code
      * @static
@@ -60,5 +60,10 @@ export declare class EnumPlus {
      * @memberof EnumPlus
      */
     createOptions(params?: EnumCreateOptionsParams): SelectOptions[];
+}
+/** 枚举类声明扩展接口
+ *
+ * 如果需要在全局遍历整个枚举成员时，可以继续此抽象接口 */
+export declare abstract class AbstractEnumDeclaration extends EnumPlus {
 }
 export {};

@@ -9,12 +9,41 @@
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.legionsDecorator = {}));
 }(this, (function (exports) { 'use strict';
 
+    /*! *****************************************************************************
+    Copyright (c) Microsoft Corporation.
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
+    ***************************************************************************** */
+    /* global Reflect, Promise */
+
+    var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+
+    function __extends(d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    }
+
     /*
      * 枚举
      * @Author: linzeqin
      * @Date: 2019-06-28 10:18:13
-     * @Last Modified by: linzeqin
-     * @Last Modified time: 2020-09-25 11:18:52
+     * @Last Modified by: duanguang
+     * @Last Modified time: 2020-09-29 15:38:32
      */
     var EnumMemberClass = /** @class */ (function () {
         function EnumMemberClass(code, value) {
@@ -42,7 +71,13 @@
     }());
     /** 枚举成员修饰器 */
     function EnumDesc(code, value) {
+        var globalClassProperty = ['findCode', 'findValue', 'createOptions'];
         return function (target, key) {
+            globalClassProperty.map(function (item) {
+                if (!target[item]) {
+                    target[item] = EnumPlus['prototype'][item];
+                }
+            });
             Object.defineProperty(target, key, {
                 enumerable: true,
                 configurable: true,
@@ -105,15 +140,21 @@
                     return "continue";
                 }
                 /** 过滤取不到code的成员 */
-                if (member.getCode() === null || member.getCode() === undefined || member.getCode() === '') {
+                if (member.getCode() === null ||
+                    member.getCode() === undefined ||
+                    member.getCode() === '') {
                     return "continue";
                 }
                 /** 过滤取不到value的成员 */
-                if (member.getValue() === null || member.getValue() === undefined || member.getValue() === '') {
+                if (member.getValue() === null ||
+                    member.getValue() === undefined ||
+                    member.getValue() === '') {
                     return "continue";
                 }
                 /** 过滤需要移除的成员 */
-                if (params && params.excludeKey && params.excludeKey.indexOf(member.getCode()) >= 0) {
+                if (params &&
+                    params.excludeKey &&
+                    params.excludeKey.indexOf(member.getCode()) >= 0) {
                     return "continue";
                 }
                 var code = member.getCode().toString();
@@ -122,13 +163,16 @@
                 if (params && params.format) {
                     arr.push({
                         key: code,
-                        value: params.format.split('').map(function (item) {
+                        value: params.format
+                            .split('')
+                            .map(function (item) {
                             if (item === 'K')
                                 return code;
                             if (item === 'V')
                                 return value;
                             return item;
-                        }).join(''),
+                        })
+                            .join(''),
                     });
                 }
                 else {
@@ -146,9 +190,19 @@
         };
         return EnumPlus;
     }());
+    /** 枚举类声明扩展接口
+     *
+     * 如果需要在全局遍历整个枚举成员时，可以继续此抽象接口 */
+    var AbstractEnumDeclaration = /** @class */ (function (_super) {
+        __extends(AbstractEnumDeclaration, _super);
+        function AbstractEnumDeclaration() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return AbstractEnumDeclaration;
+    }(EnumPlus));
 
+    exports.AbstractEnumDeclaration = AbstractEnumDeclaration;
     exports.EnumDesc = EnumDesc;
-    exports.EnumPlus = EnumPlus;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

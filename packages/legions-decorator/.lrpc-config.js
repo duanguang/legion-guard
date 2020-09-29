@@ -33,8 +33,8 @@ module.exports = {
     },
     {
       name: 'umdenumplus',
-      input: resolves('src/enum.plus/index.ts'),
-      file: resolves('enum.plus/index.js'),
+      input: resolves('src/enumerate/index.ts'),
+      file: resolves('enumerate/index.js'),
       format: 'umd',
       banner: 'legions-decorator',
       outputName: 'legionsDecorator',
