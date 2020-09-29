@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+    <!-- <script src="../dist/legions-report.js"></script> -->
+    <!-- <script src="https://qa-zy.hoolinks.com/static/plugin/legions-report.js"></script> -->
+    
+</head>
+<body>
+    <script type="text/javascript">
+        /** 主体脚本 */
+    !(function(){
+        var sourceUrl = 'https://qa-zy.hoolinks.com/static/scp-checkList-static/scp-checkList/';
+        var appId = 'react-scp-checkList';
+        var styleId = 'react-scp-checkList-style';
+        
+        
+        /** 环境准备，加载import-html-entry.js，创建模块渲染节点，创建样式节点 */
+        var script = document.createElement('script');
+        
+        
+        script.src = 'https://qa-zy.hoolinks.com/static/plugin/legions-report.js';
+        
+        /** 判断importHTML是否存在，存在就直接执行main，不存在就等待导入完毕后再执行 */
+        if (window.legionsReport) {
+            new window.legionsReport.MicroApps().register([{
+                entity: sourceUrl,
+                name:'SCP核注清单',
+                container: appId,
+                styleId:styleId,
+           }]);
+        } else {
+            document.body.appendChild(script);
+            /** 等待js加载完毕后执行主体脚本 */
+            script.onload = script.onreadystatechange = function () {
+                if (!this.readyState || /^(loaded|complete)$/.test(this.readyState)) {
+                //     new window.legionsReport.MicroApps().register([{
+                //         entity: sourceUrl,
+                //         name:'SCP核注清单',
+                //         container: appId,
+                //         styleId:styleId,
+                //   }]);
+                setTimeout(()=>{
+                    console.log(window.legionsReport,111)
+                })
+                
+                }
+            };
+        }
+    }());
+            console.log(window.Demo)
+        </script>
+</body>
+</html>

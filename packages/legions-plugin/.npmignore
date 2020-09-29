@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log
+.DS_Store
+.idea
+src
+test
+lib
+webpack.config.js
+yarn.lock
+.eslintrc
+.babelrc
+.gitignore
