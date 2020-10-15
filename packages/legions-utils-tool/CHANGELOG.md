@@ -14,3 +14,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Bug Fixes
 
 - 修复下载事件调用方法错误问题 ([fdb987c](https://github.com/duanguang/lerna-legion-library/commit/fdb987c9f28400e20f88fddd9cb5d2a3c402db47))
+
+## [0.0.8](https://github.com/duanguang/lerna-legion-library/compare/legions-utils-tool@0.0.8...legions-utils-tool@0.0.8) (2020-10-15)
+
+### Bug Fixes
+
+- 修复 normalize 箭头函数未转换问题 ([fdb987c](https://github.com/duanguang/lerna-legion-library/commit/fdb987c9f28400e20f88fddd9cb5d2a3c402db47))
