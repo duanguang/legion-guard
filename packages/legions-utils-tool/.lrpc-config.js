@@ -22,7 +22,7 @@ module.exports = {
   },
   extendPlugins: [],
   entitys: [
-    {
+    /* {
       name: 'umdDev',
       input: resolves('src/index.ts'),
       file: resolves('dist/legions-utils-tool.umd.js'),
@@ -111,7 +111,7 @@ module.exports = {
       format: 'umd',
       banner: 'legions-utils-tool',
       outputName: 'legionsUtilsTool',
-    },
+    }, */
     {
       name: 'umdobjectutils',
       input: resolves('src/object.utils/index.ts'),
@@ -120,7 +120,7 @@ module.exports = {
       banner: 'legions-utils-tool',
       outputName: 'legionsUtilsTool',
     },
-    {
+    /* {
       name: 'umdregex',
       input: resolves('src/regex/index.ts'),
       file: resolves('regex/index.js'),
@@ -159,6 +159,6 @@ module.exports = {
       format: 'umd',
       banner: 'legions-utils-tool',
       outputName: 'legionsUtilsTool',
-    },
+    }, */
   ],
 };
