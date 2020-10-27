@@ -1,6 +1,6 @@
 {
   "name": "legions-lunar",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "> 连接增强器，提高业务产出效率 ",
   "keywords": [
     "mobx-decorator",
@@ -30,7 +30,8 @@
     "reflect-metadata": ">0.1.1"
   },
   "dependencies": {
-    "warning": "^3.0.0"
+    "warning": "^3.0.0",
+    "legions-thirdparty-plugin": "^0.0.8"
   },
   "devDependencies": {
     "@types/jest": "^24.0.25",
@@ -42,6 +43,7 @@
     "@commitlint/config-conventional": "^7.3.1",
     "antd": "^2.7.4",
     "core-js": "3",
+    "cross-env": "^2.0.1",
     "brain-store": "^0.1.10-rc.1",
     "brain-store-utils": "0.1.13-beta.2",
     "history": "^4.7.2",
@@ -79,7 +81,7 @@
   ],
   "scripts": {
     "test": "jest",
-    "build": "legions-rpc rpc -c",
+    "build": "cross-env PACKAGE=main legions-rpc rpc -c",
     "builds": "npm run build:main",
     "build:main": "node build/build.main.js",
     "release": "bash build/release.sh"

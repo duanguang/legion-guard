@@ -1,3 +1,4 @@
+import { LegionsPluginsExecute as LegionsThPluginsExecute } from 'legions-thirdparty-plugin';
 export declare type loggerType = 'hlTable-constructor' | 'hlTable-watchData' | 'hlTable-componentWillMount' | 'hlTable-componentWillUnmount' | 'hlTable-componentDidMount' | 'hlTable-componentDidUpdate' | 'hlTable-componentWillReceiveProps' | 'hlTable-render' | 'hlFormContainer-constructor' | 'hlFormContainer-watchData' | 'hlFormContainer-componentWillMount' | 'hlFormContainer-componentWillUnmount' | 'hlFormContainer-componentDidMount' | 'hlFormContainer-componentDidUpdate' | 'hlFormContainer-componentWillReceiveProps' | 'hlFormContainer-render' | 'hlFormContainer-validateFields' | 'uiStore';
 interface IUserInfo<U = {}> {
     userEntity?: {
@@ -120,7 +121,7 @@ export declare const legionsPlugins: (onLoaded?: () => void, src?: string) => Il
  * 回调函数执行时机，如果SDK资源未加载，则在资源加载完成时执行。如果资源已经准备妥当，则直接执行回调
  *
  */
-export declare function LegionsPluginsExecute(onExecute: (legions: IlegionsPlugin) => void): void;
+export declare const LegionsPluginsExecute: typeof LegionsThPluginsExecute;
 interface ILoggerManagerConsoleLog {
     type: loggerType;
     logConent?: Object;

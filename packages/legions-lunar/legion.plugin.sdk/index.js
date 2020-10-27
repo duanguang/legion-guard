@@ -5,6 +5,7 @@
   */
 import { notification } from 'antd';
 import React from 'react';
+import { legionsPlugins as legionsPlugins$1, LegionsPluginsExecute as LegionsPluginsExecute$1 } from 'legions-thirdparty-plugin';
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -32,18 +33,17 @@ var __assign = function() {
     return __assign.apply(this, arguments);
 };
 
-var legionsPluginLoadedList = []; // 主要用于存储legions-plugin-sdk 加载完成时，需要执行的回调函数队列信息
-function onLoadScript(onLoaded, src) {
-    var id = 'legions-plugin-sdk';
+/* let legionsPluginLoadedList: Array<() => void> = []; // 主要用于存储legions-plugin-sdk 加载完成时，需要执行的回调函数队列信息
+function onLoadScript(onLoaded?: () => void,src?: string) {
+    let id = 'legions-plugin-sdk'
     if (!window['legionsPlugins'] && !window.parent['legionsPlugins'] && !document.getElementById(id)) {
-        var script = document.createElement('script');
+        let script = document.createElement('script');
         script.id = id;
-        var version = Date.parse(new Date().toString());
+        const version = Date.parse(new Date().toString());
         if (src && typeof src === 'string') {
             script.src = src;
-        }
-        else {
-            script.src = process.env.environment === 'production' ? "https://hoolinks.com/static/common/plugins/legions-plugin-sdk.min.js?v=" + version : "https://qa-zy.hoolinks.com/static/plugin/legions-plugin-sdk.js?v=" + version;
+        } else {
+            script.src = process.env.environment === 'production' ? `https://hoolinks.com/static/common/plugins/legions-plugin-sdk.min.js?v=${version}` : `https://qa-zy.hoolinks.com/static/plugin/legions-plugin-sdk.js?v=${version}`;
         }
         document.body.appendChild(script);
         // @ts-ignore
@@ -51,29 +51,99 @@ function onLoadScript(onLoaded, src) {
             // tslint:disable-next-line: no-invalid-this
             //@ts-ignore
             if (!this.readyState || /^(loaded|complete)$/.test(this.readyState)) {
-                var legions = legionsPlugins();
+                let legions = legionsPlugins();
                 addBrowserMessage(legions);
                 if (typeof onLoaded === 'function') {
                     onLoaded && onLoaded();
                 }
-                legionsPluginLoadedList.map(function (item) {
+                legionsPluginLoadedList.map((item) => {
                     item();
-                });
+                })
                 legionsPluginLoadedList = [];
             }
         };
     }
-}
-function addBrowserMessage(legions) {
+} */
+/* function addBrowserMessage(legions: IlegionsPlugin) {
     if (!legions) {
         return;
     }
-    if (legions.DataOrigin.has('openBrowserUpdateMessage')) {
+    if (legions.DataOrigin.has<ILegionsPluginDataOrigin>('openBrowserUpdateMessage')) {
         return;
     }
-    legions.DataOrigin.add('openBrowserUpdateMessage', function () {
-        var keys = 'isOpenBrowserUpdateMessage';
+    legions.DataOrigin.add('openBrowserUpdateMessage',() => {
+        const keys = 'isOpenBrowserUpdateMessage'
         if (!legions.DataOrigin.get(keys)) {
+            const key = `open${Date.now()}`;
+            notification.warning({
+                btn: (<a href="http://browsehappy.osfipin.com/">
+                    立即升级
+                </a>),
+                duration: void 0,
+                key,
+                className: key,
+                message: (<span style={{ color: 'red' }}>浏览器升级通知</span>),
+                description: (<div><p>您的浏览器版本过低，可能无法使用部分功能。</p><p>为了获得更好的使用体验，请您升级。</p><p style={{ color: 'red' }}>推荐使用谷歌，火狐浏览器!</p></div>),
+            })
+            let closeDom = document.getElementsByClassName(key);
+            if (closeDom && closeDom.length > 0) {
+                closeDom = closeDom[0].getElementsByClassName('ant-notification-notice-close');
+                if (closeDom && closeDom.length > 0) {
+                    let closeDoms = closeDom[0];
+                    closeDoms.setAttribute('style','display:none')
+                }
+            }
+            if (legions.DataOrigin.has(keys)) {
+                legions.DataOrigin.update(keys,true);
+            } else {
+                legions.DataOrigin.add(keys,true);
+            }
+        }
+    })
+} */
+/* const _LegionsPlugins = () => {
+    let _legions = null;
+    let getLegions = (onLoaded?: () => void,src?: string) => {
+        if (_legions) {
+            if (typeof onLoaded === 'function') {
+                onLoaded && onLoaded(); // 如果资源已经加载完成，传入的回调函数立即执行
+            }
+            //@ts-ignore
+            addBrowserMessage(_legions)
+            return _legions;
+        }
+        let legions = null;
+        try {
+            if (window['legionsPlugins'] && Object.keys(window['legionsPlugins']).length > 0) {
+                legions = window['legionsPlugins'];
+            } else if (window.parent['legionsPlugins'] && Object.keys(window.parent['legionsPlugins']).length > 0) {
+                legions = window.parent['legionsPlugins'];
+            }
+        } catch (e) {
+            legions = window['legionsPlugins'];
+        } finally {
+            if (!legions) {
+                if (onLoaded && typeof onLoaded === 'function') {
+                    // 当资源还未加载完成时，所有调用该函数的回调，全部写入待执行队列，在资源加载完成，在依次执行
+                    legionsPluginLoadedList.push(onLoaded);
+                }
+                onLoadScript(onLoaded,src)
+            }
+        }
+        _legions = legions;
+        return _legions;
+    }
+    return getLegions;
+} */
+/** 公共SDK方法，包含用户浏览器信息,写入公共方法 */
+//@ts-ignore
+/* export const legionsPlugins: (onLoaded?: () => void,src?: string) => IlegionsPlugin = _LegionsPlugins(); */
+//@ts-ignore
+var legionsPlugins = function (onLoaded, src) {
+    return legionsPlugins$1({
+        onLoaded: onLoaded,
+        src: src,
+        notification: function () {
             var key = "open" + Date.now();
             notification.warning({
                 btn: (React.createElement("a", { href: "http://browsehappy.osfipin.com/" }, "\u7ACB\u5373\u5347\u7EA7")),
@@ -94,67 +164,14 @@ function addBrowserMessage(legions) {
                     closeDoms.setAttribute('style', 'display:none');
                 }
             }
-            if (legions.DataOrigin.has(keys)) {
-                legions.DataOrigin.update(keys, true);
-            }
-            else {
-                legions.DataOrigin.add(keys, true);
-            }
         }
     });
-}
-var _LegionsPlugins = function () {
-    var _legions = null;
-    var getLegions = function (onLoaded, src) {
-        if (_legions) {
-            if (typeof onLoaded === 'function') {
-                onLoaded && onLoaded(); // 如果资源已经加载完成，传入的回调函数立即执行
-            }
-            //@ts-ignore
-            addBrowserMessage(_legions);
-            return _legions;
-        }
-        var legions = null;
-        try {
-            if (window['legionsPlugins'] && Object.keys(window['legionsPlugins']).length > 0) {
-                legions = window['legionsPlugins'];
-            }
-            else if (window.parent['legionsPlugins'] && Object.keys(window.parent['legionsPlugins']).length > 0) {
-                legions = window.parent['legionsPlugins'];
-            }
-        }
-        catch (e) {
-            legions = window['legionsPlugins'];
-        }
-        finally {
-            if (!legions) {
-                if (onLoaded && typeof onLoaded === 'function') {
-                    // 当资源还未加载完成时，所有调用该函数的回调，全部写入待执行队列，在资源加载完成，在依次执行
-                    legionsPluginLoadedList.push(onLoaded);
-                }
-                onLoadScript(onLoaded, src);
-            }
-        }
-        _legions = legions;
-        return _legions;
-    };
-    return getLegions;
 };
-/** 公共SDK方法，包含用户浏览器信息,写入公共方法 */
-//@ts-ignore
-var legionsPlugins = _LegionsPlugins();
 /**全局变量LegionsPlugins执行函数
  * 回调函数执行时机，如果SDK资源未加载，则在资源加载完成时执行。如果资源已经准备妥当，则直接执行回调
  *
  */
-function LegionsPluginsExecute(onExecute) {
-    legionsPlugins(function () {
-        var legions = legionsPlugins();
-        if (legions) {
-            onExecute && onExecute(legions);
-        }
-    });
-}
+var LegionsPluginsExecute = LegionsPluginsExecute$1;
 /** 日志记录 */
 var LoggerManager = {
     consoleLog: function (options) {
