@@ -13,17 +13,18 @@
   "main": "dist/legions-utils-tool.umd.js",
   "typings": "types/index.d.ts",
   "devDependencies": {
-    "@types/jest": "^24.0.25",
-    "@types/node": "^10.0.0",
     "@commitlint/cli": "^7.3.2",
     "@commitlint/config-conventional": "^7.3.1",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^10.0.0",
     "axios": "^0.18.0",
-    "husky": "^1.3.1",
     "core-js": "3",
-    "legions-rpc-cli": "^0.0.8",
+    "husky": "^1.3.1",
     "invariant": "^2.2.1",
     "jest": "^24.9.0",
-    "jsdom":"^16.4.0",
+    "jest-localstorage-mock": "^2.4.3",
+    "jsdom": "^16.4.0",
+    "legions-rpc-cli": "^0.0.8",
     "ts-jest": "^24.2.0"
   },
   "directories": {
@@ -54,7 +55,7 @@
     "not op_mini all"
   ],
   "scripts": {
-    "test": "jest --watch ./packages/legions-utils-tool/__tests__/debounce.test.ts",
+    "test": "jest",
     "build": "legions-rpc rpc -c",
     "build:main": "node build/build.main.js",
     "release": "bash build/release.sh"
