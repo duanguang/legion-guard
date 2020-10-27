@@ -1,6 +1,6 @@
 {
   "name": "legions-decorator",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "> 常用修饰器集合，如表单规则修饰器等",
   "keywords": [
     "form-decorator",
@@ -39,7 +39,8 @@
   "files": [
     "dist",
     "types",
-    "async.validator"
+    "async.validator",
+    "enumerate"
   ],
   "scripts": {
     "test": "jest",
