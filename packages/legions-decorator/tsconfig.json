@@ -3,6 +3,7 @@
         "declaration": true,
         "declarationDir": "./types",
         "module": "esnext",
+        "types": ["jest", "node"],
         /*  "noImplicitAny": true, */
         "outDir": "./dist",
         "target": "es5",
@@ -29,9 +30,9 @@
         "skipLibCheck": true,
         "allowSyntheticDefaultImports": true,
         "stripInternal": true,
-        "emitDecoratorMetadata": false,
-        "experimentalDecorators": false,
-        "strictPropertyInitialization": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "strictPropertyInitialization": false,
         /* "typeRoots": ["./types"], */
         "importHelpers": true,
         "sourceMap": true,
@@ -40,9 +41,10 @@
         "noImplicitThis": true,
         "alwaysStrict": true,
     },
-    "include": [
-        "src/**/*"
-    ],
+    "include": ["src/**/*", "__tests__/**/*"],
+    // "include": [
+    //     "src/**/*"
+    // ],
     "exclude": [
         "node_modules",
         "dist",

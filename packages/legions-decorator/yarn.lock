@@ -3878,6 +3878,13 @@ left-pad@^1.3.0:
   resolved "https://registry.npm.taobao.org/left-pad/download/left-pad-1.3.0.tgz#5b8a3a7765dfe001261dde915589e782f8c94d1e"
   integrity sha1-W4o6d2Xf4AEmHd6RVYnngvjJTR4=
 
+legions-control-container@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.npm.taobao.org/legions-control-container/download/legions-control-container-0.0.5.tgz#5ae3950fa21142fac88d4ed523d0bb8be35cb9af"
+  integrity sha1-WuOVD6IRQvrIjU7VI9C7i+Ncua8=
+  dependencies:
+    reflect-metadata "^0.1.13"
+
 legions-rpc-cli@^0.0.8:
   version "0.0.8"
   resolved "https://registry.npm.taobao.org/legions-rpc-cli/download/legions-rpc-cli-0.0.8.tgz#93490dd2c55f48f33493a889ce00106305acd74c"

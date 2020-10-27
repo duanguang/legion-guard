@@ -1,18 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1600523962766" clover="3.2.0">
-  <project timestamp="1600523962766" name="All files">
-    <metrics statements="9" coveredstatements="5" conditionals="16" coveredconditionals="3" methods="3" coveredmethods="2" elements="28" coveredelements="10" complexity="0" loc="9" ncloc="9" packages="1" files="1" classes="1"/>
-    <file name="legions-mobx-decorator.esm.js" path="/Users/duanguang/Documents/Front-End/legions/legion-guard/packages/legions-decorator/dist/legions-mobx-decorator.esm.js">
-      <metrics statements="9" coveredstatements="5" conditionals="16" coveredconditionals="3" methods="3" coveredmethods="2"/>
-      <line num="6" count="1" type="stmt"/>
-      <line num="7" count="1" type="cond" truecount="3" falsecount="1"/>
-      <line num="12" count="1" type="stmt"/>
-      <line num="22" count="0" type="cond" truecount="0" falsecount="4"/>
-      <line num="23" count="0" type="stmt"/>
-      <line num="26" count="0" type="stmt"/>
-      <line num="28" count="0" type="stmt"/>
-      <line num="31" count="1" type="stmt"/>
-      <line num="33" count="1" type="stmt"/>
+<coverage generated="1601365429416" clover="3.2.0">
+  <project timestamp="1601365429416" name="All files">
+    <metrics statements="47" coveredstatements="47" conditionals="35" coveredconditionals="35" methods="13" coveredmethods="13" elements="95" coveredelements="95" complexity="0" loc="47" ncloc="47" packages="1" files="1" classes="1"/>
+    <file name="index.ts" path="/Users/duanguang/Documents/Front-End/legions/legion-guard/packages/legions-decorator/src/enumerate/index.ts">
+      <metrics statements="47" coveredstatements="47" conditionals="35" coveredconditionals="35" methods="13" coveredmethods="13"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="33" count="19" type="stmt"/>
+      <line num="34" count="19" type="stmt"/>
+      <line num="42" count="1" type="stmt"/>
+      <line num="43" count="244" type="stmt"/>
+      <line num="52" count="1" type="stmt"/>
+      <line num="53" count="179" type="stmt"/>
+      <line num="55" count="1" type="stmt"/>
+      <line num="76" count="1" type="stmt"/>
+      <line num="77" count="19" type="stmt"/>
+      <line num="78" count="19" type="stmt"/>
+      <line num="79" count="19" type="stmt"/>
+      <line num="80" count="57" type="cond" truecount="2" falsecount="0"/>
+      <line num="81" count="3" type="stmt"/>
+      <line num="84" count="19" type="stmt"/>
+      <line num="97" count="1" type="stmt"/>
+      <line num="105" count="1" type="stmt"/>
+      <line num="106" count="3" type="stmt"/>
+      <line num="107" count="11" type="stmt"/>
+      <line num="108" count="11" type="cond" truecount="4" falsecount="0"/>
+      <line num="109" count="2" type="stmt"/>
+      <line num="112" count="1" type="stmt"/>
+      <line num="121" count="1" type="stmt"/>
+      <line num="122" count="5" type="stmt"/>
+      <line num="123" count="18" type="stmt"/>
+      <line num="124" count="18" type="cond" truecount="4" falsecount="0"/>
+      <line num="125" count="4" type="stmt"/>
+      <line num="128" count="1" type="stmt"/>
+      <line num="138" count="1" type="stmt"/>
+      <line num="139" count="10" type="stmt"/>
+      <line num="140" count="112" type="stmt"/>
+      <line num="141" count="112" type="stmt"/>
+      <line num="142" count="112" type="cond" truecount="2" falsecount="0"/>
+      <line num="146" count="63" type="cond" truecount="2" falsecount="0"/>
+      <line num="154" count="45" type="cond" truecount="2" falsecount="0"/>
+      <line num="162" count="36" type="cond" truecount="2" falsecount="0"/>
+      <line num="169" count="33" type="stmt"/>
+      <line num="170" count="33" type="stmt"/>
+      <line num="172" count="33" type="cond" truecount="4" falsecount="0"/>
+      <line num="173" count="20" type="stmt"/>
+      <line num="178" count="112" type="cond" truecount="2" falsecount="0"/>
+      <line num="179" count="80" type="cond" truecount="2" falsecount="0"/>
+      <line num="180" count="60" type="stmt"/>
+      <line num="185" count="13" type="stmt"/>
+      <line num="191" count="10" type="stmt"/>
+      <line num="193" count="1" type="stmt"/>
+      <line num="197" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
