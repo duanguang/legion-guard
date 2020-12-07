@@ -2,7 +2,7 @@
  * @Author: duanguang
  * @Date: 2020-10-26 15:59:35
  * @Last Modified by: duanguang
- * @Last Modified time: 2020-11-03 16:53:03
+ * @Last Modified time: 2020-12-07 14:35:45
  */
 const path = require('path');
 const resolves = _path => path.join(process.cwd(), _path);
@@ -182,6 +182,16 @@ const browser = [
     outputName: 'legionsUtilsTool',
   },
 ];
+const stateMachine = [
+  {
+    name: 'umdbrowser',
+    input: resolves('src/state.machine/index.ts'),
+    file: resolves('state.machine/index.js'),
+    format: 'umd',
+    banner: 'legions-utils-tool',
+    outputName: 'legionsUtilsTool',
+  },
+]
 const entitys = {
   vueStore,
   typevalidation,
@@ -198,6 +208,7 @@ const entitys = {
   cookie,
   main,
   browser,
+  stateMachine,
 };
 let all = [];
 Object.keys(entitys).map(key => {

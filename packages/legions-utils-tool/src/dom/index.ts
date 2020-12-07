@@ -44,3 +44,5 @@ export const off = (function () {
     };
   }
 })();
+
+export { postMessage } from './postMessage';

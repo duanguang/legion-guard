@@ -1,4 +1,3 @@
-import { type } from 'os';
 
 //@ts-ignore
 const StateMachine = require('javascript-state-machine');
@@ -52,6 +51,7 @@ interface IStateMachineResult{
     transitions: () => string[];
     exceMethod: (name: string) => void;
     exceObserver: (name: string,...arg: any[]) => void;
+    observe:(name:string,callback:(...arg: any[])=>void)=>void
 }
 type IStateMachineResultFunc<T> = {
     [P in keyof T]:T[P];
@@ -81,17 +81,3 @@ export function stateMachine<obserMethods={},lifecycleEvents={}>(options:IStateM
         }
     }
 }
-const s= stateMachine<{onClick:(value:IOnEvent)=>void}>({
-    init: 'a',
-    transitions: [
-        {
-            name: 'ss',
-            form: 'a',
-            to:'b',
-        }
-    ],
-    methods: {
-        onClick: (value) => {
-        },
-    }
-})
