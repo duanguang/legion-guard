@@ -21,13 +21,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - 修复 normalize 箭头函数未转换问题 ([fdb987c](https://github.com/duanguang/legion-guard/commit/fdb987c9f28400e20f88fddd9cb5d2a3c402db47))
 
-## [0.0.9-rc1](https://github.com/duanguang/legion-guard/compare/legion-utils-tool@0.0.9-rc1...legion-utils-tool@0.0.9-rc1) (2020-11-03)
+## [0.0.9-rc.1](https://github.com/duanguang/legion-guard/compare/legion-utils-tool@0.0.9-rc1...legion-utils-tool@0.0.9-rc1) (2020-11-03)
 
 ### Feature
 
 - 新增浏览器环境信息获取函数([3acab503](https://github.com/duanguang/legion-guard/commit/3acab503b2c965e53bee3b05fdccc11b5447f8a5))
 
-## [0.0.9-rc2](https://github.com/duanguang/legion-guard/compare/legion-utils-tool@0.0.9-rc2...legion-utils-tool@0.0.9-rc2) (2020-12-07)
+## [0.0.9-rc.2](https://github.com/duanguang/legion-guard/compare/legion-utils-tool@0.0.9-rc2...legion-utils-tool@0.0.9-rc2) (2020-12-07)
 
 ### Feature
 
