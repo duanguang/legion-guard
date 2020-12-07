@@ -27,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 - 新增浏览器环境信息获取函数([3acab503](https://github.com/duanguang/legion-guard/commit/3acab503b2c965e53bee3b05fdccc11b5447f8a5))
 
-## [0.0.9-rc.2](https://github.com/duanguang/legion-guard/compare/legion-utils-tool@0.0.9-rc2...legion-utils-tool@0.0.9-rc2) (2020-12-07)
+## [0.0.9](https://github.com/duanguang/legion-guard/compare/legion-utils-tool@0.0.9...legion-utils-tool@0.0.9) (2020-12-07)
 
 ### Feature
 
