@@ -2,7 +2,7 @@
 node_modules
 TODO.md
 lib
-docs/_book
+docs
 examples/**/build.js
 types/typings
 build
@@ -11,3 +11,4 @@ explorations
 *.log
 test/e2e/reports
 test/e2e/screenshots
+coverage

@@ -51,8 +51,7 @@
     "taro.request",
     "type.validation",
     "vue.store",
-    "browser",
-    "docs"
+    "browser"
   ],
   "browserslist": [
     ">0.2%",
