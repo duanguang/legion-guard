@@ -8,7 +8,7 @@ describe('测试公用工具类', () => {
         // Sun Sep 27 2020 12:14:12:22 GMT+0800 (中国标准时间)
         let date2 = 1601180052022
         // @ts-ignore
-        expect(formatDate('','yyyy-MM-dd')).toBe(`${new Date().getFullYear()}-${new Date().getMonth()>9?new Date().getMonth()+1:'0'+(new Date().getMonth()+1)}-${new Date().getDate()}`)
+        expect(formatDate('','yyyy-MM-dd')).toBe(`${new Date().getFullYear()}-${new Date().getMonth()>=9?new Date().getMonth()+1:'0'+(new Date().getMonth()+1)}-${new Date().getDate()}`)
         expect(formatDate(date,'yyyy-MM-dd HH:mm:ss')).toBe('1976-05-04 03:32:03')
         expect(formatDate(date,'')).toBe('1976-05-04 03:32:03')
         expect(formatDate(date,'yyyy-MM-dd hh:mm:ss')).toBe('1976-05-04 03:32:03')
@@ -66,7 +66,7 @@ describe('测试公用工具类', () => {
         expect(isLeapYear(1601)).toEqual(false)
     });
     it('测试获取某一年某一月的总天数', () => {
-        expect(getMonthDays()).toEqual(30)
+        /* expect(getMonthDays()).toEqual(30) */
         expect(getMonthDays(new Date('2020-10-10'))).toEqual(31)
         expect(getMonthDays(new Date('2020-2-1'))).toEqual(29)
         expect(getMonthDays(2020,2)).toEqual(29)
@@ -78,7 +78,7 @@ describe('测试公用工具类', () => {
     });
     it('测试获取指定日期月数最后一天', () => {
         // @ts-ignore
-        expect(getLastDay()).toEqual('2020/09/30')
+        /* expect(getLastDay()).toEqual('2020/09/30') */
         expect(getLastDay(new Date('2020-10-10'))).toEqual('2020/10/31')
         expect(getLastDay('2020-02-10')).toEqual('2020/02/29')
         expect(getLastDay('2021-02-10')).toEqual('2021/02/28')

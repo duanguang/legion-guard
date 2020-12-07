@@ -22,4 +22,5 @@ module.exports = {
       statements: 95,
     }, */
   },
+  setupFiles: ["jest-localstorage-mock"],
 };
