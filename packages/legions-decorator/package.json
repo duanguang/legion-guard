@@ -1,6 +1,6 @@
 {
   "name": "legions-decorator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "> 常用修饰器集合，如表单规则修饰器等",
   "keywords": [
     "form-decorator",
@@ -16,7 +16,7 @@
   "peerDependencies": {},
   "dependencies": {
     "reflect-metadata": "^0.1.13",
-    "legions-utils-tool": "^0.0.6",
+    "legions-utils-tool": "^0.0.8",
     "warning": "^3.0.0"
   },
   "devDependencies": {
