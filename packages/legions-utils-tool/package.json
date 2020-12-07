@@ -60,7 +60,7 @@
   ],
   "scripts": {
     "test": "jest",
-    "build": "cross-env PACKAGE=dom legions-rpc rpc -c",
+    "build": "cross-env PACKAGE=stateMachine legions-rpc rpc -c",
     "build:main": "node build/build.main.js",
     "release": "bash build/release.sh"
   },

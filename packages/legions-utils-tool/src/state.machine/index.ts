@@ -1,6 +1,8 @@
 
 //@ts-ignore
-const StateMachine = require('javascript-state-machine');
+/* const StateMachine = require('javascript-state-machine'); */
+import * as StateMachines from 'javascript-state-machine';
+const StateMachine = StateMachines.default;
 interface IStateMachinetransitions{
     transitions:Itransitions[];
 }
