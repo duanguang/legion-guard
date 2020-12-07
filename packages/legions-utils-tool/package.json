@@ -43,6 +43,7 @@
     "download",
     "format.date",
     "format.string",
+    "state.machine",
     "invariant",
     "object.utils",
     "regex",
@@ -50,7 +51,8 @@
     "taro.request",
     "type.validation",
     "vue.store",
-    "browser"
+    "browser",
+    "docs"
   ],
   "browserslist": [
     ">0.2%",
