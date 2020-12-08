@@ -32,3 +32,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Feature
 
 - 新增状态机管理及postMessage通信方法([976eca6](https://github.com/duanguang/legion-guard/commit/976eca677bc678172a17132571a948cb6d4674e3))
+
+
+## [0.0.10](https://github.com/duanguang/legion-guard/compare/legion-utils-tool@0.0.10...legion-utils-tool@0.0.10) (2020-12-08)
+
+### Bug Fixes
+
+- 修复状态机返回对象指向错误([347a7309](https://github.com/duanguang/legion-guard/commit/347a7309fa03b5fd0f4b861377fbb87b0296d742))
