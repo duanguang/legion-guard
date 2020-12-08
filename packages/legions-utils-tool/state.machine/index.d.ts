@@ -12,14 +12,14 @@ interface Itransitions {
     /** 转移前状态
      *  如果是数组，则表示只要转移前数据状态在集合内，则都可以进行转移
      */
-    form: string | string[];
+    from: string | string[];
     /** 转换后状态 */
     to: string;
 }
-interface IOnEvent {
+export interface IOnEvent {
     event: string;
     from: string;
-    fsm: IStateMachineResult;
+    fsm: IFsm;
     to: string;
     transition: string;
 }
@@ -34,7 +34,7 @@ interface IStateMachineOptions<obserMethods = {}, lifecycleEvents = {}> extends 
         onAfterTransition?: (value: IOnEvent) => void;
     } & obserMethods & lifecycleEvents;
 }
-interface IStateMachineResult {
+interface IFsm {
     allStates: () => string[];
     allTransitions: () => string[];
     can: (state: string) => boolean;
@@ -44,9 +44,12 @@ interface IStateMachineResult {
     state: string;
     /**  return list of transitions that are allowed from the current state */
     transitions: () => string[];
+    observe: (name: string, callback: (...arg: any[]) => void) => void;
+}
+interface IStateMachineResult {
+    fsm: IFsm;
     exceMethod: (name: string) => void;
     exceObserver: (name: string, ...arg: any[]) => void;
-    observe: (name: string, callback: (...arg: any[]) => void) => void;
 }
 export declare function stateMachine<obserMethods = {}, lifecycleEvents = {}>(options: IStateMachineOptions<obserMethods, lifecycleEvents>): IStateMachineResult & obserMethods;
 export {};
