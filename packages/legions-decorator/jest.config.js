@@ -22,4 +22,5 @@ module.exports = {
       statements: 95,
     }, */
   },
+  testURL: 'http://localhost:8004/main.html?name=zhaoliang&age=18',
 };
