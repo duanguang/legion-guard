@@ -1,7 +1,7 @@
 /*
  * @Author: zhaoliang
  * @Date: 2020-12-30 09:56:48
- * @LastEditTime: 2020-12-30 15:54:06
+ * @LastEditTime: 2021-01-04 15:17:16
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /legion-guard/packages/legions-decorator/__tests__/urlParams.test.ts
@@ -12,13 +12,13 @@ import { urlParams } from '../src/urlParams';
 describe('start Test urlParams Decorator', () => {
     it('无参数', () => {
         class A {
-            @urlParams()
+            @urlParams
             name: string
 
-            @urlParams()
+            @urlParams
             age: string
 
-            @urlParams()
+            @urlParams
             sex: string
         }
         let a = new A()
