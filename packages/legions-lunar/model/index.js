@@ -1,6 +1,6 @@
 /**
-  * legions-lunar v0.0.4
-  * (c) 2020 duanguang
+  * legions-lunar v0.0.5-rc.1
+  * (c) 2021 duanguang
   * @license MIT
   */
 /** 下拉选项数据VModel */
@@ -151,7 +151,7 @@ var BaseFormFields = /** @class */ (function () {
         var _this = this;
         if (form && this) {
             Object.keys(form).forEach(function (item) {
-                _this[item] = __assign(__assign({}, form[item]), { value: form[item].value });
+                _this[item] = __assign(__assign({}, form[item]), { value: form[item] ? form[item].value : void 0 });
             });
         }
     };
