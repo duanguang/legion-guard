@@ -10,7 +10,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 - 新增[@FormRuleProperty](https://github.com/submitting)FormRuleProperty 修饰器 ([a018052](https://github.com/duanguang/lerna-legion-library/commit/a018052def80c8d2a872f4e269f5e35e203df6ff))
 
 
-## 0.0.5 (2021-03-02)
+## 0.0.6-beta.1 (2021-03-02)
 
 ### Feature
 
