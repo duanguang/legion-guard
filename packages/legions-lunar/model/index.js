@@ -1,5 +1,5 @@
 /**
-  * legions-lunar v0.0.5-rc.1
+  * legions-lunar v0.0.5-rc.2
   * (c) 2021 duanguang
   * @license MIT
   */
@@ -10,11 +10,22 @@ var HlLabeledValue = /** @class */ (function () {
         this.key = void 0;
         //@ts-ignore
         this.label = void 0;
+        /** 扩展字段,即将废弃
+         *
+         * 新版本组件库将不再支持
+         */
         this.keyValue = void 0;
+        /** 扩展字段 */
+        this.extendedField = void 0;
         if (params) {
             this.key = params.key;
             this.label = params.label;
-            this.keyValue = params.keyValue;
+            if (this.keyValue) {
+                this.keyValue = params.keyValue;
+            }
+            if (this.extendedField) {
+                this.extendedField = params.extendedField;
+            }
         }
     }
     return HlLabeledValue;
