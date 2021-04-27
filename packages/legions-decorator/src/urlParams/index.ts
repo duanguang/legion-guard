@@ -1,8 +1,8 @@
 /*
  * @Author: zhaoliang
  * @Date: 2020-12-29 15:08:15
- * @LastEditTime: 2021-01-04 17:18:45
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-04-27 16:40:16
+ * @LastEditors: zhaoliang
  * @Description: In User Settings Edit
  * @FilePath: /legion-guard/packages/legions-decorator/src/urlParams/index.ts
  */
@@ -15,7 +15,7 @@ const decoratorProperty = (target: Object | Function, key: string, url?: string)
     return Object.defineProperty(target, key, {
         get: function () {
             let string = url ? url : window.location.href
-            const reg = new RegExp(key + '=([^&|^/]*)', 'i');
+            const reg = new RegExp(key + '=([^&]*)', 'i');
             const r = string.match(reg);
             if (r !== null) return unescape(r[1]);
             return '';
