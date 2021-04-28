@@ -1,5 +1,5 @@
 /**
-  * legions-decorator v0.0.4
+  * legions-decorator v0.0.6-beta.2
   * (c) 2021 duanguang
   * @license MIT
   */
@@ -44,8 +44,8 @@
     /*
      * @Author: zhaoliang
      * @Date: 2020-12-29 15:08:15
-     * @LastEditTime: 2021-01-04 17:18:45
-     * @LastEditors: Please set LastEditors
+     * @LastEditTime: 2021-04-27 16:40:16
+     * @LastEditors: zhaoliang
      * @Description: In User Settings Edit
      * @FilePath: /legion-guard/packages/legions-decorator/src/urlParams/index.ts
      */
@@ -53,7 +53,7 @@
         return Object.defineProperty(target, key, {
             get: function () {
                 var string = url ? url : window.location.href;
-                var reg = new RegExp(key + '=([^&|^/]*)', 'i');
+                var reg = new RegExp(key + '=([^&]*)', 'i');
                 var r = string.match(reg);
                 if (r !== null)
                     return unescape(r[1]);
