@@ -15,7 +15,7 @@ module.exports = {
   },
   extendPlugins: [],
   entitys: [
-    {
+    /* {
       name: 'umd',
       input: resolves('src/index.ts'),
       file: resolves('dist/legions-mobx-decorator.esm.js'),
@@ -38,6 +38,14 @@ module.exports = {
       format: 'umd',
       banner: 'legions-decorator',
       outputName: 'legionsDecorator',
-    },
+    }, */
+    {
+      name: 'umdurlParams',
+      input: resolves('src/urlParams/index.ts'),
+      file: resolves('urlParams/index.js'),
+      format: 'umd',
+      banner: 'legions-decorator',
+      outputName: 'legionsDecorator',
+    }
   ],
 };

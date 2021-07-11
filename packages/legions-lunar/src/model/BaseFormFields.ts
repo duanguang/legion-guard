@@ -171,7 +171,7 @@ export class BaseFormFields {
       Object.keys(form).forEach(item => {
         this[item] = {
           ...form[item],
-          value: form[item].value,
+          value: form[item]?form[item].value:void 0,
         };
       });
     }

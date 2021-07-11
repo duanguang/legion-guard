@@ -131,7 +131,7 @@ const selectOptionLabel = new HlLabeledValue(); // 下拉选项Lable模型
 import {
   FormRuleProperty,
   createFormRule,
-} from 'legions-decorator/async.validator';
+} from 'legions-lunar/async.validator';
 import { IBaseFormFields } from 'legions-lunar/types/model/BaseFormFields';
 import { BaseFormFields,HlLabeledValue} from 'legions-lunar/model';
 
@@ -206,7 +206,7 @@ export class FormInfoRule extends FormFields {
 > 对象生成 hash
 
 ```js
-import { shortHash } from 'legions-decorator/object-hash';
+import { shortHash } from 'legions-lunar/object-hash';
 ```
 
 ### schedule
@@ -214,7 +214,7 @@ import { shortHash } from 'legions-decorator/object-hash';
 > 订阅监听 mobx 数据方法
 
 ```js
-import { schedule, ISchedule } from 'legions-decorator/schedule';
+import { schedule, ISchedule } from 'legions-lunar/schedule';
 
 let subscription: ISchedule = schedule([this.watch.bind(this)]);
 

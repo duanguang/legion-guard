@@ -3916,10 +3916,10 @@ legions-rpc-cli@^0.0.8:
     typescript "^4.0.2"
     uglify-js "^3.1.2"
 
-legions-utils-tool@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/legions-utils-tool/-/legions-utils-tool-0.0.6.tgz#d052d83d277fdcf5eb44ef12c676faa90eda52d8"
-  integrity sha512-NK2Gva6EQz9CQVgTqvoChiB1zb3VYcx077l2eU/NLoErid5LsAk3R6ljikc4HkmIp9gkkR8bT9+CQWW4baB1Sw==
+legions-utils-tool@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.nlark.com/legions-utils-tool/download/legions-utils-tool-0.0.8.tgz#c58cb1e5ca4e4b6754913474fb401163c46ec116"
+  integrity sha1-xYyx5cpOS2dUkTR0+0ARY8RuwRY=
 
 leven@^3.1.0:
   version "3.1.0"

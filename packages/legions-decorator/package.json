@@ -1,6 +1,6 @@
 {
   "name": "legions-decorator",
-  "version": "0.0.4",
+  "version": "0.0.6-beta.2",
   "description": "> 常用修饰器集合，如表单规则修饰器等",
   "keywords": [
     "form-decorator",
@@ -40,11 +40,13 @@
     "dist",
     "types",
     "async.validator",
+    "urlParams",
     "enumerate"
   ],
   "scripts": {
     "test": "jest",
     "test:enum": "jest --watch ./__tests__/enum.plus.test.ts",
+    "test:urlParams": "jest --watch ./__tests__/urlParams.test.ts --env=jsdom",
     "build": "legions-rpc rpc -c",
     "build:main": "node build/build.main.js",
     "release": "bash build/release.sh"

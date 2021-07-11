@@ -1,2 +1,2 @@
 export { HlLabeledValue } from './HlLabeledValue';
-export { BaseFormFields } from './BaseFormFields';
+export { BaseFormFields, IBaseFormFields } from './BaseFormFields';
