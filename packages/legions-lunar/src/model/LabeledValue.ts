@@ -1,6 +1,6 @@
 import { LabeledValue } from 'antd/lib/select';
 /** 下拉选项数据VModel */
-export class HlLabeledValue implements LabeledValue {
+export class LegionsLabeledValue implements LabeledValue {
   //@ts-ignore
   key: string = void 0;
   //@ts-ignore
@@ -12,7 +12,7 @@ export class HlLabeledValue implements LabeledValue {
   keyValue?: string = void 0;
   /** 扩展字段 */
   extendedField?: string = void 0;
-  constructor(params?: HlLabeledValue) {
+  constructor(params?: LegionsLabeledValue) {
     if (params) {
       this.key = params.key;
       this.label = params.label;

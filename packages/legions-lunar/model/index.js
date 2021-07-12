@@ -1,11 +1,11 @@
 /**
-  * legions-lunar v0.0.5-rc.2
+  * legions-lunar v0.0.5-rc.3
   * (c) 2021 duanguang
   * @license MIT
   */
 /** 下拉选项数据VModel */
-var HlLabeledValue = /** @class */ (function () {
-    function HlLabeledValue(params) {
+var LegionsLabeledValue = /** @class */ (function () {
+    function LegionsLabeledValue(params) {
         //@ts-ignore
         this.key = void 0;
         //@ts-ignore
@@ -28,7 +28,7 @@ var HlLabeledValue = /** @class */ (function () {
             }
         }
     }
-    return HlLabeledValue;
+    return LegionsLabeledValue;
 }());
 
 /*! *****************************************************************************
@@ -183,4 +183,4 @@ var BaseFormFields = /** @class */ (function () {
     return BaseFormFields;
 }());
 
-export { BaseFormFields, HlLabeledValue };
+export { BaseFormFields, LegionsLabeledValue };

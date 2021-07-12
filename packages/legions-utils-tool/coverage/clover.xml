@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1603777468480" clover="3.2.0">
-  <project timestamp="1603777468480" name="All files">
-    <metrics statements="383" coveredstatements="348" conditionals="245" coveredconditionals="221" methods="69" coveredmethods="61" elements="697" coveredelements="630" complexity="0" loc="383" ncloc="383" packages="11" files="11" classes="11"/>
+<coverage generated="1626103574835" clover="3.2.0">
+  <project timestamp="1626103574836" name="All files">
+    <metrics statements="387" coveredstatements="349" conditionals="242" coveredconditionals="212" methods="71" coveredmethods="61" elements="700" coveredelements="622" complexity="0" loc="387" ncloc="387" packages="11" files="11" classes="11"/>
     <package name="cookie">
       <metrics statements="20" coveredstatements="20" conditionals="8" coveredconditionals="8" methods="4" coveredmethods="4"/>
-      <file name="index.ts" path="E:\hoolinks\legion-guard\packages\legions-utils-tool\src\cookie\index.ts">
+      <file name="index.ts" path="/Users/duanguang/Documents/Front-End/legions/legion-guard/packages/legions-utils-tool/src/cookie/index.ts">
         <metrics statements="20" coveredstatements="20" conditionals="8" coveredconditionals="8" methods="4" coveredmethods="4"/>
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="3" type="stmt"/>
@@ -30,7 +30,7 @@
     </package>
     <package name="debounce">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-      <file name="index.ts" path="E:\hoolinks\legion-guard\packages\legions-utils-tool\src\debounce\index.ts">
+      <file name="index.ts" path="/Users/duanguang/Documents/Front-End/legions/legion-guard/packages/legions-utils-tool/src/debounce/index.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -43,7 +43,7 @@
     </package>
     <package name="download">
       <metrics statements="31" coveredstatements="8" conditionals="16" coveredconditionals="4" methods="9" coveredmethods="3"/>
-      <file name="index.ts" path="E:\hoolinks\legion-guard\packages\legions-utils-tool\src\download\index.ts">
+      <file name="index.ts" path="/Users/duanguang/Documents/Front-End/legions/legion-guard/packages/legions-utils-tool/src/download/index.ts">
         <metrics statements="31" coveredstatements="8" conditionals="16" coveredconditionals="4" methods="9" coveredmethods="3"/>
         <line num="3" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
@@ -79,25 +79,25 @@
       </file>
     </package>
     <package name="format.date">
-      <metrics statements="94" coveredstatements="94" conditionals="85" coveredconditionals="82" methods="12" coveredmethods="12"/>
-      <file name="index.ts" path="E:\hoolinks\legion-guard\packages\legions-utils-tool\src\format.date\index.ts">
-        <metrics statements="94" coveredstatements="94" conditionals="85" coveredconditionals="82" methods="12" coveredmethods="12"/>
+      <metrics statements="94" coveredstatements="93" conditionals="85" coveredconditionals="76" methods="12" coveredmethods="12"/>
+      <file name="index.ts" path="/Users/duanguang/Documents/Front-End/legions/legion-guard/packages/legions-utils-tool/src/format.date/index.ts">
+        <metrics statements="94" coveredstatements="93" conditionals="85" coveredconditionals="76" methods="12" coveredmethods="12"/>
         <line num="1" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
-        <line num="10" count="24" type="cond" truecount="2" falsecount="0"/>
-        <line num="11" count="24" type="stmt"/>
-        <line num="15" count="24" type="stmt"/>
-        <line num="16" count="24" type="cond" truecount="2" falsecount="0"/>
-        <line num="17" count="24" type="stmt"/>
-        <line num="29" count="24" type="stmt"/>
-        <line num="30" count="24" type="stmt"/>
-        <line num="31" count="240" type="stmt"/>
-        <line num="32" count="92" type="stmt"/>
-        <line num="33" count="92" type="cond" truecount="4" falsecount="0"/>
-        <line num="34" count="90" type="stmt"/>
-        <line num="35" count="22" type="stmt"/>
-        <line num="36" count="90" type="cond" truecount="2" falsecount="0"/>
-        <line num="39" count="24" type="stmt"/>
+        <line num="10" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="13" type="stmt"/>
+        <line num="15" count="13" type="stmt"/>
+        <line num="16" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="13" type="stmt"/>
+        <line num="29" count="13" type="stmt"/>
+        <line num="30" count="13" type="stmt"/>
+        <line num="31" count="130" type="stmt"/>
+        <line num="32" count="62" type="stmt"/>
+        <line num="33" count="62" type="cond" truecount="4" falsecount="0"/>
+        <line num="34" count="60" type="stmt"/>
+        <line num="35" count="24" type="stmt"/>
+        <line num="36" count="60" type="cond" truecount="2" falsecount="0"/>
+        <line num="39" count="13" type="stmt"/>
         <line num="49" count="1" type="stmt"/>
         <line num="60" count="8" type="cond" truecount="2" falsecount="0"/>
         <line num="61" count="8" type="stmt"/>
@@ -111,16 +111,16 @@
         <line num="82" count="8" type="cond" truecount="2" falsecount="0"/>
         <line num="83" count="8" type="stmt"/>
         <line num="91" count="1" type="stmt"/>
-        <line num="92" count="7" type="cond" truecount="2" falsecount="0"/>
-        <line num="93" count="7" type="stmt"/>
-        <line num="97" count="7" type="stmt"/>
-        <line num="98" count="7" type="stmt"/>
-        <line num="99" count="7" type="cond" truecount="4" falsecount="0"/>
-        <line num="100" count="5" type="stmt"/>
-        <line num="101" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="102" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="103" count="3" type="stmt"/>
-        <line num="104" count="1" type="stmt"/>
+        <line num="92" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="93" count="1" type="stmt"/>
+        <line num="97" count="1" type="stmt"/>
+        <line num="98" count="1" type="stmt"/>
+        <line num="99" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="100" count="1" type="stmt"/>
+        <line num="101" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="102" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="103" count="1" type="stmt"/>
+        <line num="104" count="0" type="stmt"/>
         <line num="115" count="1" type="stmt"/>
         <line num="116" count="5" type="stmt"/>
         <line num="117" count="5" type="cond" truecount="2" falsecount="0"/>
@@ -180,7 +180,7 @@
     </package>
     <package name="format.string">
       <metrics statements="90" coveredstatements="90" conditionals="75" coveredconditionals="74" methods="9" coveredmethods="9"/>
-      <file name="index.ts" path="E:\hoolinks\legion-guard\packages\legions-utils-tool\src\format.string\index.ts">
+      <file name="index.ts" path="/Users/duanguang/Documents/Front-End/legions/legion-guard/packages/legions-utils-tool/src/format.string/index.ts">
         <metrics statements="90" coveredstatements="90" conditionals="75" coveredconditionals="74" methods="9" coveredmethods="9"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -276,13 +276,13 @@
     </package>
     <package name="invariant">
       <metrics statements="14" coveredstatements="4" conditionals="8" coveredconditionals="3" methods="2" coveredmethods="1"/>
-      <file name="index.js" path="E:\hoolinks\legion-guard\packages\legions-utils-tool\src\invariant\index.js">
+      <file name="index.js" path="/Users/duanguang/Documents/Front-End/legions/legion-guard/packages/legions-utils-tool/src/invariant/index.js">
         <metrics statements="14" coveredstatements="4" conditionals="8" coveredconditionals="3" methods="2" coveredmethods="1"/>
         <line num="21" count="1" type="stmt"/>
-        <line num="22" count="40" type="cond" truecount="1" falsecount="1"/>
-        <line num="23" count="40" type="cond" truecount="1" falsecount="1"/>
+        <line num="22" count="23" type="cond" truecount="1" falsecount="1"/>
+        <line num="23" count="23" type="cond" truecount="1" falsecount="1"/>
         <line num="24" count="0" type="stmt"/>
-        <line num="28" count="40" type="cond" truecount="1" falsecount="1"/>
+        <line num="28" count="23" type="cond" truecount="1" falsecount="1"/>
         <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="31" count="0" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
@@ -296,7 +296,7 @@
     </package>
     <package name="object.utils">
       <metrics statements="36" coveredstatements="36" conditionals="14" coveredconditionals="14" methods="17" coveredmethods="17"/>
-      <file name="index.ts" path="E:\hoolinks\legion-guard\packages\legions-utils-tool\src\object.utils\index.ts">
+      <file name="index.ts" path="/Users/duanguang/Documents/Front-End/legions/legion-guard/packages/legions-utils-tool/src/object.utils/index.ts">
         <metrics statements="36" coveredstatements="36" conditionals="14" coveredconditionals="14" methods="17" coveredmethods="17"/>
         <line num="1" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
@@ -338,7 +338,7 @@
     </package>
     <package name="regex">
       <metrics statements="64" coveredstatements="64" conditionals="22" coveredconditionals="22" methods="2" coveredmethods="2"/>
-      <file name="index.ts" path="E:\hoolinks\legion-guard\packages\legions-utils-tool\src\regex\index.ts">
+      <file name="index.ts" path="/Users/duanguang/Documents/Front-End/legions/legion-guard/packages/legions-utils-tool/src/regex/index.ts">
         <metrics statements="64" coveredstatements="64" conditionals="22" coveredconditionals="22" methods="2" coveredmethods="2"/>
         <line num="26" count="1" type="stmt"/>
         <line num="27" count="24" type="stmt"/>
@@ -408,7 +408,7 @@
     </package>
     <package name="storage">
       <metrics statements="5" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
-      <file name="index.ts" path="E:\hoolinks\legion-guard\packages\legions-utils-tool\src\storage\index.ts">
+      <file name="index.ts" path="/Users/duanguang/Documents/Front-End/legions/legion-guard/packages/legions-utils-tool/src/storage/index.ts">
         <metrics statements="5" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
@@ -418,26 +418,30 @@
       </file>
     </package>
     <package name="type.validation">
-      <metrics statements="12" coveredstatements="12" conditionals="9" coveredconditionals="8" methods="6" coveredmethods="6"/>
-      <file name="index.ts" path="E:\hoolinks\legion-guard\packages\legions-utils-tool\src\type.validation\index.ts">
-        <metrics statements="12" coveredstatements="12" conditionals="9" coveredconditionals="8" methods="6" coveredmethods="6"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="23" type="cond" truecount="3" falsecount="0"/>
+      <metrics statements="16" coveredstatements="14" conditionals="6" coveredconditionals="5" methods="8" coveredmethods="6"/>
+      <file name="index.ts" path="/Users/duanguang/Documents/Front-End/legions/legion-guard/packages/legions-utils-tool/src/type.validation/index.ts">
+        <metrics statements="16" coveredstatements="14" conditionals="6" coveredconditionals="5" methods="8" coveredmethods="6"/>
         <line num="6" count="2" type="stmt"/>
-        <line num="7" count="15" type="stmt"/>
+        <line num="7" count="23" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
+        <line num="10" count="15" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="22" count="2" type="stmt"/>
-        <line num="23" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="3" type="cond" truecount="2" falsecount="0"/>
       </file>
     </package>
     <package name="utils">
       <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
-      <file name="utils.ts" path="E:\hoolinks\legion-guard\packages\legions-utils-tool\src\utils\utils.ts">
+      <file name="utils.ts" path="/Users/duanguang/Documents/Front-End/legions/legion-guard/packages/legions-utils-tool/src/utils/utils.ts">
         <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="21" type="cond" truecount="2" falsecount="0"/>

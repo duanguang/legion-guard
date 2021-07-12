@@ -18,7 +18,7 @@ describe('测试公共工具',()=>{
     it('测试isPromise',()=>{
         const promise = new Promise((resolve, reject) => {
             try {
-              resolve();
+              resolve(true);
             } catch (err) {
               reject(err);
             }

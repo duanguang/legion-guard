@@ -9,14 +9,14 @@ const main = [
     banner: 'legions-lunar',
     outputName: 'legionsMobxDecorator',
   },
-  {
+  /* {
     name: 'umd',
     input: resolves('src/index.ts'),
     file: resolves('dist/legions-lunar.umd.js'),
     format: 'umd',
     banner: 'legions-lunar',
     outputName: 'legionsMobxDecorator',
-  },
+  }, */
 ];
 const mobxdecorator = [
   {
@@ -27,14 +27,14 @@ const mobxdecorator = [
     banner: 'legions-lunar',
     outputName: 'legionsMobxDecorator',
   },
-  {
+ /*  {
     name: 'umdmobxdecorator',
     input: resolves('src/mobx-decorator/index.ts'),
     file: resolves('mobx-decorator/mobx-decorator.umd.js'),
     format: 'umd',
     banner: 'legions-lunar',
     outputName: 'legionsMobxDecorator',
-  },
+  }, */
 ];
 const antdToolkit = [
   {
@@ -102,7 +102,7 @@ const legionpluginsdk = [
   },
 ];
 const entitys = {
-  legionpluginsdk,
+  /* legionpluginsdk, */
   vmodel,
   schedule,
   warning,
@@ -135,6 +135,7 @@ module.exports = {
     path.resolve('./src/schedule/index.ts'), */
   ],
   rollupPlugin: {
+    babel: false,
     typescript: {
       moduleSpecifier: [
         {

@@ -6,11 +6,7 @@
  * @param {*} value
  * @param {*} iDay 有效期 数字
  */
-export declare function setCookie(
-  name: string,
-  value: string,
-  iDay: number
-): void;
+export declare function setCookie(name: string, value: string, iDay: number): void;
 /**
  *获取cookie值
  *
@@ -18,7 +14,7 @@ export declare function setCookie(
  * @param {*} name
  * @returns
  */
-export declare function getCookie(name?: string): string;
+export declare function getCookie(name: string): string;
 /**
  *移除cookie
  *

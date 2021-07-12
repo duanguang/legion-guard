@@ -7,27 +7,18 @@
 const path = require('path');
 const resolves = _path => path.join(process.cwd(), _path);
 const main = [
-  {
-    name: 'umdDev',
-    input: resolves('src/index.ts'),
-    file: resolves('dist/legions-utils-tool.umd.js'),
-    format: 'umd',
-    env: 'development',
-    banner: 'legions-utils-tool',
-    outputName: 'legionsUtilsTool',
-  },
-  {
+  /* {
     name: 'iife',
     input: resolves('src/index.ts'),
     file: resolves('dist/legions-utils-tool.js'),
     format: 'iife',
     banner: 'legions-utils-tool',
     outputName: 'legionsUtilsTool',
-  },
+  }, */
   {
     name: 'esm',
     input: resolves('src/index.ts'),
-    file: resolves('dist/legions-utils-tool.esm.js'),
+    file: resolves('dist/index.js'),
     format: 'es',
     banner: 'legions-utils-tool',
     outputName: 'legionsUtilsTool',
@@ -44,158 +35,136 @@ const main = [
 ];
 const cookie = [
   {
-    name: 'umdcookie',
+    name: 'escookie',
     input: resolves('src/cookie/index.ts'),
     file: resolves('cookie/index.js'),
-    format: 'umd',
+    format: 'es',
     banner: 'legions-utils-tool',
     outputName: 'legionsUtilsTool',
   },
 ];
 const debounce = [
   {
-    name: 'umddebounce',
+    name: 'esdebounce',
     input: resolves('src/debounce/index.ts'),
     file: resolves('debounce/index.js'),
-    format: 'umd',
+    format: 'es',
     banner: 'legions-utils-tool',
     outputName: 'legionsUtilsTool',
   },
 ];
 const dom = [
   {
-    name: 'umddom',
+    name: 'esdom',
     input: resolves('src/dom/index.ts'),
     file: resolves('dom/index.js'),
-    format: 'umd',
+    format: 'es',
     banner: 'legions-utils-tool',
     outputName: 'legionsUtilsTool',
   },
 ];
 const download = [
   {
-    name: 'umddownload',
+    name: 'esdownload',
     input: resolves('src/download/index.ts'),
     file: resolves('download/index.js'),
-    format: 'umd',
+    format: 'es',
     banner: 'legions-utils-tool',
     outputName: 'legionsUtilsTool',
   },
 ];
 const formatdate = [
   {
-    name: 'umdformatdate',
+    name: 'esformatdate',
     input: resolves('src/format.date/index.ts'),
     file: resolves('format.date/index.js'),
-    format: 'umd',
+    format: 'es',
     banner: 'legions-utils-tool',
     outputName: 'legionsUtilsTool',
   },
 ];
 const formatstring = [
   {
-    name: 'umdformatstring',
+    name: 'esformatstring',
     input: resolves('src/format.string/index.ts'),
     file: resolves('format.string/index.js'),
-    format: 'umd',
+    format: 'es',
     banner: 'legions-utils-tool',
     outputName: 'legionsUtilsTool',
   },
 ];
 const invariant = [
   {
-    name: 'umdinvariant',
+    name: 'esinvariant',
     input: resolves('src/invariant/index.js'),
     file: resolves('invariant/index.js'),
-    format: 'umd',
+    format: 'es',
     banner: 'legions-utils-tool',
     outputName: 'legionsUtilsTool',
   },
 ];
 const objectutils = [
   {
-    name: 'umdobjectutils',
+    name: 'esobjectutils',
     input: resolves('src/object.utils/index.ts'),
     file: resolves('object.utils/index.js'),
-    format: 'umd',
+    format: 'es',
     banner: 'legions-utils-tool',
     outputName: 'legionsUtilsTool',
   },
 ];
 const regex = [
   {
-    name: 'umdregex',
+    name: 'esregex',
     input: resolves('src/regex/index.ts'),
     file: resolves('regex/index.js'),
-    format: 'umd',
+    format: 'es',
     banner: 'legions-utils-tool',
     outputName: 'legionsUtilsTool',
   },
 ];
 const storage = [
   {
-    name: 'umdstorage',
+    name: 'esstorage',
     input: resolves('src/storage/index.ts'),
     file: resolves('storage/index.js'),
-    format: 'umd',
-    banner: 'legions-utils-tool',
-    outputName: 'legionsUtilsTool',
-  },
-];
-const taro = [
-  {
-    name: 'umdtaro',
-    input: resolves('src/taro.request/index.ts'),
-    file: resolves('taro.request/index.js'),
-    format: 'umd',
+    format: 'es',
     banner: 'legions-utils-tool',
     outputName: 'legionsUtilsTool',
   },
 ];
 const typevalidation = [
   {
-    name: 'umdtypevalidation',
+    name: 'estypevalidation',
     input: resolves('src/type.validation/index.ts'),
     file: resolves('type.validation/index.js'),
-    format: 'umd',
-    banner: 'legions-utils-tool',
-    outputName: 'legionsUtilsTool',
-  },
-];
-const vueStore = [
-  {
-    name: 'umdvueStore',
-    input: resolves('src/vue.store/index.ts'),
-    file: resolves('vue.store/index.js'),
-    format: 'umd',
+    format: 'es',
     banner: 'legions-utils-tool',
     outputName: 'legionsUtilsTool',
   },
 ];
 const browser = [
   {
-    name: 'umdbrowser',
+    name: 'esbrowser',
     input: resolves('src/browser/index.ts'),
     file: resolves('browser/index.js'),
-    format: 'umd',
+    format: 'es',
     banner: 'legions-utils-tool',
     outputName: 'legionsUtilsTool',
   },
 ];
 const stateMachine = [
   {
-    name: 'umdbrowser',
+    name: 'esstateMachine',
     input: resolves('src/state.machine/index.ts'),
     file: resolves('state.machine/index.js'),
-    format: 'umd',
+    format: 'es',
     banner: 'legions-utils-tool',
     outputName: 'legionsUtilsTool',
   },
 ]
 const entitys = {
-  vueStore,
   typevalidation,
-  taro,
   storage,
   regex,
   objectutils,
