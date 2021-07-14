@@ -1,6 +1,6 @@
 /**
-  * legions-lunar v0.0.4
-  * (c) 2020 duanguang
+  * legions-lunar v0.0.5-rc.3
+  * (c) 2021 duanguang
   * @license MIT
   */
 import { map, partial } from 'lodash';
@@ -38,10 +38,10 @@ function __read(o, n) {
     return ar;
 }
 
-function __spread() {
-    for (var ar = [], i = 0; i < arguments.length; i++)
-        ar = ar.concat(__read(arguments[i]));
-    return ar;
+function __spreadArray(to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
 }
 
 /**
@@ -51,20 +51,13 @@ function __spread() {
  * @returns {Array<Function>}
  * @memberof StoreBase
  */
-
 function schedule() {
-  var funcs = [];
-
-  for (var _i = 0; _i < arguments.length; _i++) {
-    funcs[_i] = arguments[_i];
-  }
-
-  var subscription = map(map(funcs, function (args) {
-    return partial.apply(void 0, __spread(args));
-  }), autorun);
-  return {
-    unsubscribe: subscription[0]
-  };
+    var funcs = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        funcs[_i] = arguments[_i];
+    }
+    var subscription = map(map(funcs, function (args) { return partial.apply(void 0, __spreadArray([], __read(args))); }), autorun);
+    return { unsubscribe: subscription[0] };
 }
 
 export { schedule };

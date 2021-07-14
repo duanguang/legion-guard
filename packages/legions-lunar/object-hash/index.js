@@ -1,15 +1,12 @@
 /**
-  * legions-lunar v0.0.4
-  * (c) 2020 duanguang
+  * legions-lunar v0.0.5-rc.3
+  * (c) 2021 duanguang
   * @license MIT
   */
-import { MD5 } from 'object-hash';
+import * as rawObjectHash from 'object-hash';
 
 function shortHash(val) {
-  return MD5(val, {
-    algorithm: 'md5',
-    encoding: 'base64'
-  });
+    return rawObjectHash['MD5'](val, { algorithm: 'md5', encoding: 'base64' });
 }
 
 export { shortHash };

@@ -1,6 +1,6 @@
 /**
-  * legions-lunar v0.0.4
-  * (c) 2020 duanguang
+  * legions-lunar v0.0.5-rc.3
+  * (c) 2021 duanguang
   * @license MIT
   */
 import { observablePromise } from 'brain-store-utils';
@@ -40,10 +40,10 @@ function __read(o, n) {
     return ar;
 }
 
-function __spread() {
-    for (var ar = [], i = 0; i < arguments.length; i++)
-        ar = ar.concat(__read(arguments[i]));
-    return ar;
+function __spreadArray(to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
 }
 
 var SearchPageQuery = debounce(function (fn) {
@@ -85,7 +85,7 @@ function pagingQueryProcessing(options) {
         }
         var watch_1 = function (fireImmediatelys) {
             if (fireImmediatelys === void 0) { fireImmediatelys = true; }
-            var Reaction = reaction(function () {
+            reaction(function () {
                 var state = {
                     // @ts-ignore
                     error: data_1.error,
@@ -118,7 +118,7 @@ function pagingQueryProcessing(options) {
                 data_1 = observablePromise(options.servicePromise(options['queryPrams']));
             }
             else {
-                data_1 = observablePromise(options.servicePromise.apply(options, __spread(restOfName)));
+                data_1 = observablePromise(options.servicePromise.apply(options, __spreadArray([], __read(restOfName))));
             }
         };
         if (!store.data.has(options.mapItemKeys)) {

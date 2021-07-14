@@ -1,12 +1,14 @@
 {
   "name": "legion-guard",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "build:lunar": "lerna exec --scope=legions-lunar -- yarn build"
+  },
   "workspaces": [
     "packages/*"
   ],
   "dependencies": {
-    "tslib": "2.3.0"
+    
   },
   "devDependencies": {
     "@commitlint/cli": "^7.3.2",
@@ -21,6 +23,7 @@
     "jsdom": "^16.4.0",
     "legions-control-container": "^0.0.5",
     "legions-rpc-cli": "^0.0.8",
+    "tslib": "2.1.0",
     "ts-jest": "^24.2.0"
   }
 }

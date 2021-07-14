@@ -4,6 +4,7 @@
         "declarationDir": "./types",
         "outDir": "./dist",
         "target": "es5",
+        "module": "es2015",
         "moduleResolution": "node",
         "baseUrl": "./src",
         "lib": [
@@ -36,8 +37,11 @@
         "experimentalDecorators": false,
         "strictPropertyInitialization": true,
         /* "typeRoots": ["./types"], */
-        "importHelpers": true,
-        "sourceMap": true,
+        "importHelpers": false,
+        "noEmitHelpers":false,
+        "noResolve":false,
+        "noEmit":false,
+        "sourceMap": false,
         "strictNullChecks": true,
         "strictFunctionTypes": true,
         "noImplicitThis": true,

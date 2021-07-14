@@ -74,6 +74,11 @@ const schedule = [
     format: 'es',
     banner: 'legions-lunar',
     outputName: 'legionsMobxDecorator',
+    rollupPlugin: {
+      resolve: false,
+      commonjs: false,
+      babel: false,
+    },
   },
 ];
 const vmodel = [

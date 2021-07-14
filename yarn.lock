@@ -5535,7 +5535,7 @@ rc-calendar@~9.0.0:
 
 rc-cascader@~0.11.3:
   version "0.11.6"
-  resolved "https://registry.nlark.com/rc-cascader/download/rc-cascader-0.11.6.tgz?cache=0&sync_timestamp=1621922431670&other_urls=https%3A%2F%2Fregistry.nlark.com%2Frc-cascader%2Fdownload%2Frc-cascader-0.11.6.tgz#7e88cfbb7500b3941a5940cf6e91569c53e37f9d"
+  resolved "https://registry.nlark.com/rc-cascader/download/rc-cascader-0.11.6.tgz?cache=0&sync_timestamp=1626160301488&other_urls=https%3A%2F%2Fregistry.nlark.com%2Frc-cascader%2Fdownload%2Frc-cascader-0.11.6.tgz#7e88cfbb7500b3941a5940cf6e91569c53e37f9d"
   integrity sha1-fojPu3UAs5QaWUDPbpFWnFPjf50=
   dependencies:
     array-tree-filter "^1.0.0"
@@ -5827,7 +5827,7 @@ rc-tree-select@~1.10.2:
 
 rc-tree@~1.7.0, rc-tree@~1.7.1:
   version "1.7.12"
-  resolved "https://registry.nlark.com/rc-tree/download/rc-tree-1.7.12.tgz?cache=0&sync_timestamp=1625559339850&other_urls=https%3A%2F%2Fregistry.nlark.com%2Frc-tree%2Fdownload%2Frc-tree-1.7.12.tgz#65fb888be0c778a959e63e3b35aaf2671c5a494c"
+  resolved "https://registry.nlark.com/rc-tree/download/rc-tree-1.7.12.tgz#65fb888be0c778a959e63e3b35aaf2671c5a494c"
   integrity sha1-ZfuIi+DHeKlZ5j47NaryZxxaSUw=
   dependencies:
     babel-runtime "^6.23.0"
@@ -5885,7 +5885,7 @@ rc-util@4.x, rc-util@^4.0.2, rc-util@^4.0.4, rc-util@^4.15.3, rc-util@^4.4.0:
 
 react-dom@^15.4.2:
   version "15.7.0"
-  resolved "https://registry.nlark.com/react-dom/download/react-dom-15.7.0.tgz?cache=0&sync_timestamp=1625847456347&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact-dom%2Fdownload%2Freact-dom-15.7.0.tgz#39106dee996d0742fb0f43d567ef8b8153483ab2"
+  resolved "https://registry.nlark.com/react-dom/download/react-dom-15.7.0.tgz#39106dee996d0742fb0f43d567ef8b8153483ab2"
   integrity sha1-ORBt7pltB0L7D0PVZ++LgVNIOrI=
   dependencies:
     fbjs "^0.8.9"
@@ -5928,7 +5928,7 @@ react-slick@~0.15.4:
 
 react@^15.4.2:
   version "15.7.0"
-  resolved "https://registry.nlark.com/react/download/react-15.7.0.tgz?cache=0&sync_timestamp=1625847477855&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact%2Fdownload%2Freact-15.7.0.tgz#10308fd42ac6912a250bf00380751abc41ac7106"
+  resolved "https://registry.nlark.com/react/download/react-15.7.0.tgz?cache=0&sync_timestamp=1626192958108&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact%2Fdownload%2Freact-15.7.0.tgz#10308fd42ac6912a250bf00380751abc41ac7106"
   integrity sha1-EDCP1CrGkSolC/ADgHUavEGscQY=
   dependencies:
     create-react-class "^15.6.0"
@@ -6919,18 +6919,18 @@ ts-loader@^8.0.2:
 
 tslib@2.0.1:
   version "2.0.1"
-  resolved "https://registry.npm.taobao.org/tslib/download/tslib-2.0.1.tgz?cache=0&sync_timestamp=1617647074515&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftslib%2Fdownload%2Ftslib-2.0.1.tgz#410eb0d113e5b6356490eec749603725b021b43e"
+  resolved "https://registry.nlark.com/tslib/download/tslib-2.0.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.0.1.tgz#410eb0d113e5b6356490eec749603725b021b43e"
   integrity sha1-QQ6w0RPltjVkkO7HSWA3JbAhtD4=
 
-tslib@2.3.0:
+tslib@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.nlark.com/tslib/download/tslib-2.1.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.1.0.tgz#da60860f1c2ecaa5703ab7d39bc05b6bf988b97a"
+  integrity sha1-2mCGDxwuyqVwOrfTm8Bba/mIuXo=
+
+tslib@^2.0.3:
   version "2.3.0"
   resolved "https://registry.nlark.com/tslib/download/tslib-2.3.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
   integrity sha1-gDuM2rPhK6WBpMpByIObuw2ssJ4=
-
-tslib@^2.0.3:
-  version "2.2.0"
-  resolved "https://registry.nlark.com/tslib/download/tslib-2.2.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.2.0.tgz#fb2c475977e35e241311ede2693cee1ec6698f5c"
-  integrity sha1-+yxHWXfjXiQTEe3iaTzuHsZpj1w=
 
 tunnel-agent@^0.6.0:
   version "0.6.0"

@@ -1,6 +1,6 @@
 /**
-  * legions-lunar v0.0.4
-  * (c) 2020 duanguang
+  * legions-lunar v0.0.5-rc.3
+  * (c) 2021 duanguang
   * @license MIT
   */
 import { reaction } from 'mobx';
@@ -9,13 +9,12 @@ import { NProgress } from 'legions-nprogress';
 import { getInjector } from 'brain-store';
 import { message, Modal } from 'antd';
 import React from 'react';
-import { OpenDeleteConfirm, OpenConfirm, OpenModal } from 'legions-lunar/antd-toolkit';
-import { MD5 } from 'object-hash';
+import * as rawObjectHash from 'object-hash';
 import { warningOnce } from 'legions-lunar/warning';
 import { schedule } from 'legions-lunar/schedule';
-import { any, func } from 'prop-types';
+import * as PropTypes from 'prop-types';
 
-var invariant = require('invariant');
+var invariant$1 = require('invariant');
 /**
  * 进度条自动加载
  *
@@ -31,9 +30,9 @@ function loadProgress(options) {
         descriptor.value = function () {
             var that = this;
             var props = that.props || {};
-            invariant(props[options.store], "loadProgress[" + target.constructor.name + "-\u9876\u90E8\u8FDB\u5EA6\u6761UI]:\u60A8\u7684\u7EC4\u4EF6\u5B9E\u4F8B\u6CA1\u6709store\u53D8\u91CF,\u8BF7\u68C0\u67E5\u662F\u5426\u7ED1\u5B9Astore");
+            invariant$1(props[options.store], "loadProgress[" + target.constructor.name + "-\u9876\u90E8\u8FDB\u5EA6\u6761UI]:\u60A8\u7684\u7EC4\u4EF6\u5B9E\u4F8B\u6CA1\u6709store\u53D8\u91CF,\u8BF7\u68C0\u67E5\u662F\u5426\u7ED1\u5B9Astore");
             var __mobxDecorators = props[options.store]['__mobxDecorators'] || props[options.store]['__mobxInitializedProps'];
-            invariant(__mobxDecorators && __mobxDecorators[options.state], "loadProgress[" + target.constructor.name + "-\u9876\u90E8\u8FDB\u5EA6\u6761UI]:\u60A8\u7684\u7EC4\u4EF6\u5B9E\u4F8Bstore\u5BF9\u8C61\u4E0A\u9700\u8981\u76D1\u542C\u7684\u5C5E\u6027\u6CA1\u6709\u88AB@observable\u5305\u88F9,\u8BF7\u53C2\u7167observable[mobx]\u7528\u6CD5");
+            invariant$1(__mobxDecorators && __mobxDecorators[options.state], "loadProgress[" + target.constructor.name + "-\u9876\u90E8\u8FDB\u5EA6\u6761UI]:\u60A8\u7684\u7EC4\u4EF6\u5B9E\u4F8Bstore\u5BF9\u8C61\u4E0A\u9700\u8981\u76D1\u542C\u7684\u5C5E\u6027\u6CA1\u6709\u88AB@observable\u5305\u88F9,\u8BF7\u53C2\u7167observable[mobx]\u7528\u6CD5");
             if (__mobxDecorators && __mobxDecorators[options.state]) {
                 if (descriptor.ReactionList.length === 0) {
                     var Reaction = reaction(function () {
@@ -41,7 +40,7 @@ function loadProgress(options) {
                             return props[options.store][options.state].state;
                         }
                     }, function (state, reaction) {
-                        invariant(props[options.store][options.state] instanceof ObservablePromiseModel, "loadProgress[\u9876\u90E8\u8FDB\u5EA6\u6761UI-" + target.constructor.name + "]:\u60A8\u5728store\u5BF9\u8C61\u91CC\u9762\u9700\u8981\u76D1\u542C\u7684state\u539F\u578B\u4E0D\u662FObservablePromiseModel");
+                        invariant$1(props[options.store][options.state] instanceof ObservablePromiseModel, "loadProgress[\u9876\u90E8\u8FDB\u5EA6\u6761UI-" + target.constructor.name + "]:\u60A8\u5728store\u5BF9\u8C61\u91CC\u9762\u9700\u8981\u76D1\u542C\u7684state\u539F\u578B\u4E0D\u662FObservablePromiseModel");
                         if (state) {
                             if (state === 'pending') {
                                 NProgress.start(); // 显示顶部加载进度条
@@ -86,6 +85,8 @@ var extendStatics = function(d, b) {
 };
 
 function __extends(d, b) {
+    if (typeof b !== "function" && b !== null)
+        throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
     extendStatics(d, b);
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
@@ -119,13 +120,13 @@ function __read(o, n) {
     return ar;
 }
 
-function __spread() {
-    for (var ar = [], i = 0; i < arguments.length; i++)
-        ar = ar.concat(__read(arguments[i]));
-    return ar;
+function __spreadArray(to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
 }
 
-var invariant$1 = require('invariant');
+var invariant = require('invariant');
 /**
 * 操作数据后，根据接口结果自动弹出提示信息
 *T:组件实例
@@ -148,9 +149,9 @@ function submittingAutoMessage(options) {
                 var stores = getInjector();
                 viewStore = stores.getState(options.store);
             }
-            invariant$1(viewStore, "submittingAutoMessage[" + target.constructor.name + "-\u81EA\u52A8\u5F39\u51FA\u63D0\u793A\u64CD\u4F5C\u4FE1\u606F]:\u60A8\u7684\u7EC4\u4EF6\u5B9E\u4F8B\u6CA1\u6709store\u53D8\u91CF,\u8BF7\u68C0\u67E5\u662F\u5426\u7ED1\u5B9Astore");
+            invariant(viewStore, "submittingAutoMessage[" + target.constructor.name + "-\u81EA\u52A8\u5F39\u51FA\u63D0\u793A\u64CD\u4F5C\u4FE1\u606F]:\u60A8\u7684\u7EC4\u4EF6\u5B9E\u4F8B\u6CA1\u6709store\u53D8\u91CF,\u8BF7\u68C0\u67E5\u662F\u5426\u7ED1\u5B9Astore");
             var __mobxDecorators = viewStore['__mobxDecorators'] || viewStore['__mobxInitializedProps'];
-            invariant$1(__mobxDecorators && __mobxDecorators[options.state], "submittingAutoMessage[" + target.constructor.name + "-\u81EA\u52A8\u5F39\u51FA\u63D0\u793A\u64CD\u4F5C\u4FE1\u606F]:\u60A8\u7684\u7EC4\u4EF6\u5B9E\u4F8Bstore\u5BF9\u8C61\u4E0A\u9700\u8981\u76D1\u542C\u7684\u5C5E\u6027\u6CA1\u6709\u88AB@observable\u5305\u88F9,\u8BF7\u53C2\u7167observable[mobx]\u7528\u6CD5");
+            invariant(__mobxDecorators && __mobxDecorators[options.state], "submittingAutoMessage[" + target.constructor.name + "-\u81EA\u52A8\u5F39\u51FA\u63D0\u793A\u64CD\u4F5C\u4FE1\u606F]:\u60A8\u7684\u7EC4\u4EF6\u5B9E\u4F8Bstore\u5BF9\u8C61\u4E0A\u9700\u8981\u76D1\u542C\u7684\u5C5E\u6027\u6CA1\u6709\u88AB@observable\u5305\u88F9,\u8BF7\u53C2\u7167observable[mobx]\u7528\u6CD5");
             if (__mobxDecorators && __mobxDecorators[options.state]) {
                 if (descriptor.ReactionList.length === 0) {
                     var Reaction = reaction(function () {
@@ -159,7 +160,7 @@ function submittingAutoMessage(options) {
                             return store;
                         }
                     }, function (store, reaction) {
-                        invariant$1(viewStore[options.state] instanceof ObservablePromiseModel, "submittingAutoMessage[\u81EA\u52A8\u5F39\u51FA\u63D0\u793A\u64CD\u4F5C\u4FE1\u606F-" + target.constructor.name + "]:\u60A8\u5728store\u5BF9\u8C61\u91CC\u9762\u9700\u8981\u76D1\u542C\u7684state\u539F\u578B\u4E0D\u662FObservablePromiseModel");
+                        invariant(viewStore[options.state] instanceof ObservablePromiseModel, "submittingAutoMessage[\u81EA\u52A8\u5F39\u51FA\u63D0\u793A\u64CD\u4F5C\u4FE1\u606F-" + target.constructor.name + "]:\u60A8\u5728store\u5BF9\u8C61\u91CC\u9762\u9700\u8981\u76D1\u542C\u7684state\u539F\u578B\u4E0D\u662FObservablePromiseModel");
                         if (store) {
                             options.showProgressBar && NProgress.start();
                             if (store.state === 'resolved') {
@@ -194,6 +195,58 @@ function submittingAutoMessage(options) {
         return descriptor;
     };
 }
+
+/**
+ * legions-lunar v0.0.3
+ * (c) 2020 duanguang
+ * @license MIT
+ */
+var OpenModal = function (options) {
+    //信息提示样式
+    options.type = options.type || 'success';
+    var ref = Modal[options.type]({
+        title: options.title || '',
+        content: options.content || '',
+        onOk: function () {
+            options.onOk && options.onOk();
+            ref.destroy();
+        },
+    });
+};
+var OpenDeleteConfirm = function (options) {
+    var ref = Modal.confirm({
+        title: (options && options.title) || '删除',
+        content: (options && options.content) || '您确认删除选中数据吗？',
+        okText: (options && options.okText) || '确认',
+        okType: (options && options.okType) || 'danger',
+        cancelText: (options && options.cancelText) || '取消',
+        onOk: function () {
+            options.onOk && options.onOk();
+            ref.destroy();
+        },
+        onCancel: function () {
+            options.onCancel && options.onCancel();
+            ref.destroy();
+        },
+    });
+};
+var OpenConfirm = function (options) {
+    var ref = Modal.confirm({
+        title: options.title || 'confirm',
+        content: options.content,
+        okText: options.okText || '确认',
+        okType: options.okType || 'danger',
+        cancelText: options.cancelText || '取消',
+        onOk: function () {
+            options.onOk && options.onOk();
+            ref.destroy();
+        },
+        onCancel: function () {
+            options.onCancel && options.onCancel();
+            ref.destroy();
+        },
+    });
+};
 
 /** 对话框修饰器 */
 function confirmAnnotation(options) {
@@ -257,10 +310,7 @@ function confirmAnnotation(options) {
 }
 
 function shortHash(val) {
-  return MD5(val, {
-    algorithm: 'md5',
-    encoding: 'base64'
-  });
+    return rawObjectHash['MD5'](val, { algorithm: 'md5', encoding: 'base64' });
 }
 
 var mountedContainerInstance = null;
@@ -334,8 +384,8 @@ var PageContainer = /** @class */ (function (_super) {
         return React.createElement("div", null, this.props.children);
     };
     PageContainer.childContextTypes = {
-        page: any,
-        emit: func
+        page: PropTypes.any,
+        emit: PropTypes.func
     };
     return PageContainer;
 }(React.Component));
@@ -383,7 +433,7 @@ function page(options) {
                             store.push(props['store']);
                         }
                     }
-                    (options && options.sideEffect) && options.sideEffect.apply(options, __spread([_this.ref], store));
+                    (options && options.sideEffect) && options.sideEffect.apply(options, __spreadArray([_this.ref], __read(store)));
                 };
                 _this.state = {
                     loading: false,
@@ -437,7 +487,7 @@ function page(options) {
                 /* return <WrappedComponent {...props} ref={ref=>runInAction(()=>this.ref=ref) }></WrappedComponent>; */
             };
             page.displayName = 'page(' + getDisplayName(WrappedComponent) + ')';
-            page.contextTypes = { page: any, emit: func };
+            page.contextTypes = { page: PropTypes.any, emit: PropTypes.func };
             return page;
         }(React.Component));
         return page;
