@@ -1,8 +1,8 @@
 /*
  * @Author: zhaoliang
  * @Date: 2020-12-30 09:56:48
- * @LastEditTime: 2021-01-04 15:17:16
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-07-18 14:13:30
+ * @LastEditors: duanguang
  * @Description: In User Settings Edit
  * @FilePath: /legion-guard/packages/legions-decorator/__tests__/urlParams.test.ts
  */
@@ -24,7 +24,7 @@ describe('start Test urlParams Decorator', () => {
         let a = new A()
         expect(a.name).toEqual('zhaoliang');
         expect(a.age).toEqual('18');
-        expect(a.sex).toEqual(null);
+        expect(a.sex).toEqual(void 0);
     });
 
     it('参数为标准url', () => {
@@ -41,7 +41,7 @@ describe('start Test urlParams Decorator', () => {
         let b = new B()
         expect(b.name).toEqual('张三');
         expect(b.age).toEqual('5');
-        expect(b.sex).toEqual(null);
+        expect(b.sex).toEqual(void 0);
     });
 
     it('参数为非标准url', () => {
@@ -56,8 +56,8 @@ describe('start Test urlParams Decorator', () => {
             sex: string
         }
         let c = new C()
-        expect(c.name).toEqual('李四');
+        expect(c.name).toEqual('李四/#/admin?age=10');
         expect(c.age).toEqual('10');
-        expect(c.sex).toEqual(null);
+        expect(c.sex).toEqual(void 0);
     });
 });

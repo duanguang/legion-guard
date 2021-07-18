@@ -1,7 +1,7 @@
 /*
  * @Author: zhaoliang
  * @Date: 2020-12-29 15:08:15
- * @LastEditTime: 2021-07-18 12:59:43
+ * @LastEditTime: 2021-07-18 14:13:05
  * @LastEditors: duanguang
  * @Description: In User Settings Edit
  * @FilePath: /legion-guard/packages/legions-decorator/src/urlParams/index.ts
@@ -18,7 +18,7 @@ const decoratorProperty = (target: Object | Function, key: string, url?: string)
             const reg = new RegExp(key + '=([^&]*)', 'i');
             const r = string.match(reg);
             if (r !== null) return unescape(r[1]);
-            return '';
+            return void 0;
         },
     });
 }

@@ -22,5 +22,9 @@ module.exports = {
       statements: 95,
     }, */
   },
+  setupFiles: [
+    './script/setup.ts',
+    /* "jsdom-global/register" */
+  ],
   testURL: 'http://localhost:8004/main.html?name=zhaoliang&age=18',
 };

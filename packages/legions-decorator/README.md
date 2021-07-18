@@ -268,3 +268,48 @@ describe('枚举类测试', () => {
   });
 });
 ```
+
+## urlParams
+
+通过该修饰器可以自动对url传参进行截取
+
+- 不设置url
+  > 当没有设置URL，自动获取window.location.href
+
+```ts
+// http://localhost:8080/main.html?name=zhaoliang&age=18
+import { urlParams } from 'legions-decorator/urlParams';
+class A {
+    @urlParams
+    name: string
+
+    @urlParams
+    age: string
+
+    @urlParams
+    sex: string
+}
+let a = new A()
+expect(b.name).toEqual('张三');
+expect(b.age).toEqual('5');
+expect(b.sex).toEqual(void 0);
+```
+- 指定url
+
+```ts
+import { urlParams } from 'legions-decorator/urlParams';
+ class C {
+    @urlParams('http://localhost:8004/main.html?name=李四/#/admin?age=10')
+    name: string
+
+    @urlParams('http://localhost:8004/main.html?name=李四/#/admin?age=10')
+    age: string
+
+    @urlParams('http://localhost:8004/main.html?name=李四/#/admin?age=10')
+    sex: string
+}
+let c = new C()
+expect(c.name).toEqual('李四/#/admin?age=10');
+expect(c.age).toEqual('10');
+expect(c.sex).toEqual(void 0);
+```
