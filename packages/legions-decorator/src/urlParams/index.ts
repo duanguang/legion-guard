@@ -1,8 +1,8 @@
 /*
  * @Author: zhaoliang
  * @Date: 2020-12-29 15:08:15
- * @LastEditTime: 2021-04-27 16:40:16
- * @LastEditors: zhaoliang
+ * @LastEditTime: 2021-07-18 12:59:43
+ * @LastEditors: duanguang
  * @Description: In User Settings Edit
  * @FilePath: /legion-guard/packages/legions-decorator/src/urlParams/index.ts
  */
@@ -22,9 +22,11 @@ const decoratorProperty = (target: Object | Function, key: string, url?: string)
         },
     });
 }
+// @ts-ignore
 export const urlParams: UrlParams = (...args) => {    
     if (typeof args[0] === 'string') {
         let [url] = args
+        // @ts-ignore
         return function (target: Object | Function, key: string, descriptor?: PropertyDescriptor) {
             decoratorProperty(target, key, url)
         }

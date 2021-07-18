@@ -15,35 +15,35 @@ module.exports = {
   },
   extendPlugins: [],
   entitys: [
-    /* {
-      name: 'umd',
+    {
+      name: 'es',
       input: resolves('src/index.ts'),
       file: resolves('dist/legions-mobx-decorator.esm.js'),
-      format: 'umd',
+      format: 'es',
       banner: ' legions-decorator',
       outputName: 'legionsDecorator',
     },
     {
-      name: 'umdasyncvalidator',
+      name: 'esasyncvalidator',
       input: resolves('src/async.validator/index.ts'),
       file: resolves('async.validator/index.js'),
-      format: 'umd',
+      format: 'es',
       banner: 'legions-decorator',
       outputName: 'legionsDecorator',
     },
     {
-      name: 'umdenumplus',
+      name: 'esenumplus',
       input: resolves('src/enumerate/index.ts'),
       file: resolves('enumerate/index.js'),
-      format: 'umd',
+      format: 'es',
       banner: 'legions-decorator',
       outputName: 'legionsDecorator',
-    }, */
+    },
     {
-      name: 'umdurlParams',
+      name: 'esurlParams',
       input: resolves('src/urlParams/index.ts'),
       file: resolves('urlParams/index.js'),
-      format: 'umd',
+      format: 'es',
       banner: 'legions-decorator',
       outputName: 'legionsDecorator',
     }

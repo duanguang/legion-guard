@@ -65,7 +65,7 @@
   ],
   "scripts": {
     "test": "jest",
-    "build": "cross-env  legions-rpc rpc -c ",
+    "build": "cross-env  legions-rpc rpc -c && yarn release",
     "build:main": "node build/build.main.js",
     "release": "bash script/types.sh"
   },
