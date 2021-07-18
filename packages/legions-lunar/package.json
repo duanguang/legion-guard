@@ -1,6 +1,6 @@
 {
   "name": "legions-lunar",
-  "version": "0.0.5-rc.3",
+  "version": "0.0.5",
   "description": "> 连接增强器，提高业务产出效率 ",
   "keywords": [
     "mobx-decorator",
