@@ -16,7 +16,7 @@
   "peerDependencies": {},
   "dependencies": {
     "reflect-metadata": "^0.1.13",
-    "legions-utils-tool": "^0.0.8",
+    "legions-utils-tool": "^0.0.11",
     "warning": "^3.0.0"
   },
   "devDependencies": {
@@ -28,7 +28,6 @@
     "husky": "^1.3.1",
     "history": "^4.7.2",
     "legions-rpc-cli": "^0.0.8",
-    "legions-control-container": "^0.0.5",
     "jest": "^24.9.0",
     "ts-jest": "^24.2.0"
   },
