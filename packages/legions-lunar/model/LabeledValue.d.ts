@@ -1,6 +1,6 @@
 import { LabeledValue } from 'antd/lib/select';
 /** 下拉选项数据VModel */
-export declare class HlLabeledValue implements LabeledValue {
+export declare class LegionsLabeledValue implements LabeledValue {
     key: string;
     label: string;
     /** 扩展字段,即将废弃
@@ -10,5 +10,5 @@ export declare class HlLabeledValue implements LabeledValue {
     keyValue?: string;
     /** 扩展字段 */
     extendedField?: string;
-    constructor(params?: HlLabeledValue);
+    constructor(params?: LegionsLabeledValue);
 }
