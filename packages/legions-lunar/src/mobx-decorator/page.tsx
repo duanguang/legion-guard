@@ -6,7 +6,7 @@ import { shortHash } from '../object-hash';
 import { warningOnce } from '../warning';
 //@ts-ignore
 import { schedule } from '../schedule';
-import { ISchedule } from '../../api/schedule';
+import { ISchedule } from '../api/schedule';
 //@ts-ignore
 import * as PropTypes from 'prop-types';
 interface IPageContext {

@@ -1,5 +1,5 @@
-import { ClassOf } from '../../api/typescript';
-import { IAntdRule } from '../../api/antd/form';
+import { ClassOf } from '../api/typescript';
+import { IAntdRule } from '../api/antd/form';
 /**
  *
  *

@@ -1,5 +1,5 @@
 /**
-  * legions-lunar v0.0.5-rc.3
+  * legions-lunar v0.0.7
   * (c) 2021 duanguang
   * @license MIT
   */
