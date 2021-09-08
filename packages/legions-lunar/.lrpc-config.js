@@ -155,19 +155,6 @@ module.exports = {
           libraryName: '../warning',
           mapLibraryName: 'legions-lunar/warning',
         },
-        {
-          libraryName: '../../api/schedule',
-          mapLibraryName: '../api/schedule',
-        },
-        {
-          libraryName: '../../api/typescript',
-          mapLibraryName: '../api/typescript',
-        },
-        {
-          libraryName: '../../api/antd/form',
-          mapLibraryName: '../api/antd/form',
-        },
-        
       ],
     },
   },
