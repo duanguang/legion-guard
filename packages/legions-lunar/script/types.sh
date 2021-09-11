@@ -10,6 +10,7 @@ for a in ${typeScriptModules[@]}
 do
   echo "-----------------正在生成$a d.ts文件------------------------"
   cp -R -f types/$a/*.d.ts $a/
+  rm -rf types/$a
   echo "-----------------已经生成$a d.ts文件------------------------"
 done
 rm -rf types/src
