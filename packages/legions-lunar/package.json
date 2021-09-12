@@ -79,6 +79,11 @@
     "not ie <= 9",
     "not op_mini all"
   ],
+  "husky": {
+    "hooks": {
+        "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+},
   "scripts": {
     "test": "jest",
     "build": "cross-env  legions-rpc rpc -c && yarn release",
