@@ -41,6 +41,7 @@
     "legions-rpc-cli": "^0.0.8",
     "@commitlint/cli": "^7.3.2",
     "@commitlint/config-conventional": "^7.3.1",
+    "conventional-changelog-cli":"^2.1.1",
     "antd": "^2.7.4",
     "core-js": "3",
     "cross-env": "^2.0.1",
@@ -89,7 +90,8 @@
     "build": "cross-env  legions-rpc rpc -c && yarn release",
     "builds": "npm run build:main",
     "build:main": "node build/build.main.js",
-    "release": "bash script/types.sh"
+    "release": "bash script/types.sh",
+    "changelog": "bash script/changelog.sh"
   },
   "gitHead": "1e80f0ebb53edb8e9ecaa46efa41e0442e9d1716"
 }
