@@ -10,7 +10,7 @@
     "mobx"
   ],
   "author": "duanguang <18520583569@163.com>",
-  "homepage": "https://github.com/duanguang/lerna-legion-library.git",
+  "homepage": "https://github.com/duanguang/legion-guard/tree/master/packages/legions-lunar",
   "license": "MIT",
   "main": "dist/legions-lunar.esm.js",
   "module": "dist/legions-lunar.esm.js",
