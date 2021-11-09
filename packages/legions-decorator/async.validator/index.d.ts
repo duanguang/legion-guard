@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import { FormRule } from '../../types/api/formRule';
+import { FormRule } from '../api/formRule';
 interface ClassOf<T> {
     new (...args: any[]): T;
 }
@@ -11,7 +11,16 @@ interface ClassOf<T> {
  * @returns
  */
 export declare function FormRuleProperty<P = {}, V = {}>(metadata: FormRule.metadata<P, V>): any;
-export declare function getFormProperty<Form>(target: ClassOf<Form>, propertyKey: string): FormRule.metadata<any, any>;
+/**
+ * 获取表单字段元属性数据
+ *
+ * @export
+ * @template Form
+ * @param {ClassOf<Form>} target
+ * @param {string} propertyKey
+ * @returns
+ */
+export declare function getFormMetaProperty<Form>(target: ClassOf<Form> | Form, propertyKey: string): FormRule.metadata<any, any>;
 /**
  * 生成表单验证规则
  *

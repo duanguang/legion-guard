@@ -1,7 +1,7 @@
 import { RegExChk, validatorType } from 'legions-utils-tool/regex';
 /* const { RegExChk,validatorType} = require('legions-utils-tool/regex') */
 import 'reflect-metadata';
-import { FormRule } from '../../types/api/formRule';
+import { FormRule } from '../api/formRule';
 const FORM_META_DATA_KEY = 'JsonProperty';
 interface ClassOf<T> {
   new (...args: any[]): T;
@@ -29,9 +29,21 @@ export function FormRuleProperty<P = {}, V = {}>(
 function getFormRuleProperty(target,propertyKey) {
   return Reflect.getMetadata(FORM_META_DATA_KEY, target, propertyKey);
 }
-
-export function getFormProperty<Form>(target: ClassOf<Form>,propertyKey: string) {
-  let instance = new target();
+/**
+ * 获取表单字段元属性数据
+ *
+ * @export
+ * @template Form
+ * @param {ClassOf<Form>} target
+ * @param {string} propertyKey
+ * @returns
+ */
+export function getFormMetaProperty<Form>(target: ClassOf<Form>|Form,propertyKey: string) {
+  let instance = target;
+  if (typeof target === 'function') {
+    // @ts-ignore
+    instance = new target();
+  }
   let decoratorMetaData = Reflect.getMetadata(FORM_META_DATA_KEY, instance, propertyKey) as FormRule.metadata<any,any>
   return decoratorMetaData;
 }

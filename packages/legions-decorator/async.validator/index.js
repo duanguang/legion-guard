@@ -53,8 +53,21 @@ function FormRuleProperty(metadata) {
 function getFormRuleProperty(target, propertyKey) {
     return Reflect.getMetadata(FORM_META_DATA_KEY, target, propertyKey);
 }
-function getFormProperty(target, propertyKey) {
-    var instance = new target();
+/**
+ * 获取表单字段元属性数据
+ *
+ * @export
+ * @template Form
+ * @param {ClassOf<Form>} target
+ * @param {string} propertyKey
+ * @returns
+ */
+function getFormMetaProperty(target, propertyKey) {
+    var instance = target;
+    if (typeof target === 'function') {
+        // @ts-ignore
+        instance = new target();
+    }
     var decoratorMetaData = Reflect.getMetadata(FORM_META_DATA_KEY, instance, propertyKey);
     return decoratorMetaData;
 }
@@ -181,4 +194,4 @@ function createValidator(option, props) {
     return regex;
 }
 
-export { FormRuleProperty, createFormRule, getFormProperty };
+export { FormRuleProperty, createFormRule, getFormMetaProperty };
