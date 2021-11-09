@@ -3,7 +3,9 @@ import { RegExChk, validatorType } from 'legions-utils-tool/regex';
 import 'reflect-metadata';
 import { FormRule } from '../../types/api/formRule';
 const FORM_META_DATA_KEY = 'JsonProperty';
-
+interface ClassOf<T> {
+  new (...args: any[]): T;
+}
 /**
  * 属性规则描述信息修饰器
  *
@@ -24,10 +26,15 @@ export function FormRuleProperty<P = {}, V = {}>(
   }
   return Reflect.metadata(FORM_META_DATA_KEY, decoratorMetaData);
 }
-function getFormRuleProperty(target, propertyKey) {
+function getFormRuleProperty(target,propertyKey) {
   return Reflect.getMetadata(FORM_META_DATA_KEY, target, propertyKey);
 }
 
+export function getFormProperty<Form>(target: ClassOf<Form>,propertyKey: string) {
+  let instance = new target();
+  let decoratorMetaData = Reflect.getMetadata(FORM_META_DATA_KEY, instance, propertyKey) as FormRule.metadata<any,any>
+  return decoratorMetaData;
+}
 /**
  * 生成表单验证规则
  *

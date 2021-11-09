@@ -73,6 +73,30 @@ export declare namespace FormRule {
       | 'url'
       | 'email'
       | 'array'
-      | 'date';
+    | 'date';
+    /** 提交接口参数字段名，默认与表单字段名一致 */
+    requestParamKey?: string
+    /**
+     *服务端数据同步到表单实体模型 之前
+     * 执行 dataToFormFields 函数时触发
+     */
+    beforeDataToFormFields?:<Res>(value: V,
+      res: Res) => any
+    
+    /**
+     * 提交前数据转换
+     * 执行formFieldsToData函数时触发
+     * 
+     */
+    submitBeforeTransform?: (value: any,formFields?: any) => any;
+     
+    /**
+     * 提交前转换数据时是否忽略
+     * 执行 submitBeforeTransform 函数时生效
+     * 转换前过滤掉不需要的表单接口数据
+     * 默认不忽略
+     * @type {boolean}
+     */
+     ignore?: boolean;
   };
 }

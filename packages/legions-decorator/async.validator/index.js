@@ -1,5 +1,5 @@
 /**
-  * legions-decorator v0.0.6-beta.2
+  * legions-decorator v0.0.7
   * (c) 2021 duanguang
   * @license MIT
   */
@@ -52,6 +52,11 @@ function FormRuleProperty(metadata) {
 }
 function getFormRuleProperty(target, propertyKey) {
     return Reflect.getMetadata(FORM_META_DATA_KEY, target, propertyKey);
+}
+function getFormProperty(target, propertyKey) {
+    var instance = new target();
+    var decoratorMetaData = Reflect.getMetadata(FORM_META_DATA_KEY, instance, propertyKey);
+    return decoratorMetaData;
 }
 /**
  * 生成表单验证规则
@@ -176,4 +181,4 @@ function createValidator(option, props) {
     return regex;
 }
 
-export { FormRuleProperty, createFormRule };
+export { FormRuleProperty, createFormRule, getFormProperty };

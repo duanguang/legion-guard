@@ -1,5 +1,5 @@
 /**
-  * legions-decorator v0.0.6-beta.2
+  * legions-decorator v0.0.7
   * (c) 2021 duanguang
   * @license MIT
   */
@@ -38,7 +38,7 @@ function __read(o, n) {
 /*
  * @Author: zhaoliang
  * @Date: 2020-12-29 15:08:15
- * @LastEditTime: 2021-07-18 12:59:43
+ * @LastEditTime: 2021-07-18 14:13:05
  * @LastEditors: duanguang
  * @Description: In User Settings Edit
  * @FilePath: /legion-guard/packages/legions-decorator/src/urlParams/index.ts
@@ -51,7 +51,7 @@ var decoratorProperty = function (target, key, url) {
             var r = string.match(reg);
             if (r !== null)
                 return unescape(r[1]);
-            return '';
+            return void 0;
         },
     });
 };
