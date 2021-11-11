@@ -1,19 +1,21 @@
-# Change Log
+<a name="0.0.8"></a>
+## 0.0.8 (2021-11-11)
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
-## 0.0.4 (2020-09-16)
 
 ### Bug Fixes
 
-- 新增[@FormRuleProperty](https://github.com/submitting)FormRuleProperty 修饰器 ([a018052](https://github.com/duanguang/lerna-legion-library/commit/a018052def80c8d2a872f4e269f5e35e203df6ff))
+* 修改装饰器正则 ([b999922](https://github.com/duanguang/legion-guard/commit/b999922))
+* 修改返回值 ([f938164](https://github.com/duanguang/legion-guard/commit/f938164))
+* 新增枚举类 ([93e8530](https://github.com/duanguang/legion-guard/commit/93e8530))
+* 表单规则元数据可以在外部获取 ([edf31ae](https://github.com/duanguang/legion-guard/commit/edf31ae))
 
 
-## 0.0.6-beta.1 (2021-03-02)
+### Features
 
-### Feature
+* **legions-decorator:** 新增url参数获取修饰器 ([1ac07e2](https://github.com/duanguang/legion-guard/commit/1ac07e2))
+* 优化装饰器用法 ([3b68f69](https://github.com/duanguang/legion-guard/commit/3b68f69))
+* 增加获取url中某个参数的装饰器 ([3f03f64](https://github.com/duanguang/legion-guard/commit/3f03f64))
+* 调整枚举类继承方式 ([198e229](https://github.com/duanguang/legion-guard/commit/198e229))
 
-- 新增 `urlParams` URL截取修饰器
 
 

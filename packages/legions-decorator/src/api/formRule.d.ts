@@ -1,5 +1,5 @@
 export declare namespace FormRule {
-  type metadata<P, V> = {
+  type metadata<V,P> = {
     regex?: RegExp;
     /**
      *是否必填
@@ -75,20 +75,20 @@ export declare namespace FormRule {
       | 'array'
     | 'date';
     /** 提交接口参数字段名，默认与表单字段名一致 */
-    requestParamKey?: string
+    requestKey?: string
     /**
      *服务端数据同步到表单实体模型 之前
      * 执行 dataToFormFields 函数时触发
      */
-    beforeDataToFormFields?:<Res>(value: V,
-      res: Res) => any
+    beforeDataToFormFields?:(value: V,
+      res: any) => V
     
     /**
      * 提交前数据转换
      * 执行formFieldsToData函数时触发
      * 
      */
-    submitBeforeTransform?: (value: any,formFields?: any) => any;
+    submitBeforeTransform?: (value: V,formFields?: any) => any;
      
     /**
      * 提交前转换数据时是否忽略

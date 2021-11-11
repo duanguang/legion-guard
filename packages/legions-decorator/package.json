@@ -40,7 +40,8 @@
     "types",
     "async.validator",
     "urlParams",
-    "enumerate"
+    "enumerate",
+    "api"
   ],
   "scripts": {
     "test": "jest",
@@ -48,7 +49,8 @@
     "test:urlParams": "jest --watch ./__tests__/urlParams.test.ts --env=jsdom",
     "build": "legions-rpc rpc -c && yarn release",
     "build:main": "node build/build.main.js",
-    "release": "bash script/types.sh"
+    "release": "bash script/types.sh",
+    "changelog": "bash script/changelog.sh"
   },
   "gitHead": "1e80f0ebb53edb8e9ecaa46efa41e0442e9d1716"
 }
