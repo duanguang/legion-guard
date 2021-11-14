@@ -1,6 +1,6 @@
 {
   "name": "legions-decorator",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "> 常用修饰器集合，如表单规则修饰器等",
   "keywords": [
     "form-decorator",
@@ -24,6 +24,7 @@
     "@types/node": "^10.0.0",
     "@commitlint/cli": "^7.3.2",
     "@commitlint/config-conventional": "^7.3.1",
+    "standard-version": "^9.3.2",
     "core-js": "3",
     "husky": "^1.3.1",
     "history": "^4.7.2",
@@ -50,7 +51,8 @@
     "build": "legions-rpc rpc -c && yarn release",
     "build:main": "node build/build.main.js",
     "release": "bash script/types.sh",
-    "changelog": "bash script/changelog.sh"
+    "changelog": "bash script/changelog.sh",
+    "release1": "standard-version"
   },
   "gitHead": "1e80f0ebb53edb8e9ecaa46efa41e0442e9d1716"
 }
