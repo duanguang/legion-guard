@@ -13,7 +13,9 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "tslib": "2.3.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^14.1.0",
@@ -31,7 +33,6 @@
     "legions-rpc-cli": "^0.0.8",
     "lerna-changelog": "^2.2.0",
     "standard-version": "^9.3.2",
-    "ts-jest": "^24.2.0",
-    "tslib": "2.1.0"
+    "ts-jest": "^24.2.0"
   }
 }

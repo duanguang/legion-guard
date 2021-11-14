@@ -69,7 +69,8 @@
     "schedule",
     "object-hash",
     "legion.plugin.sdk",
-    "model"
+    "model",
+    "api"
   ],
   "browserslist": [
     ">0.2%",

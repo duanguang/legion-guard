@@ -1,4 +1,4 @@
-import { observablePromise } from 'brain-store-utils';
+import { ObservablePromiseModel } from 'brain-store-utils';
 import { ObservableMap } from 'mobx';
 interface IPageQuery<S = {}> {
     keyWords: string;
@@ -52,7 +52,7 @@ export interface IPageQueryRestOfName extends IPageQuery {
 }
 export interface IPageQueryResult<T> {
     keyWords: string;
-    data: ObservableMap<observablePromise.PramsResult<T>>;
+    data: ObservableMap<ObservablePromiseModel<T>>;
 }
 /**
  * 一般用于搜索分页自动保存每页数据，防止每次请求切换页码会重新去服务端拉取数据,优化页面体验

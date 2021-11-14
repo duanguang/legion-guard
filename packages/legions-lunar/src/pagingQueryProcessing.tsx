@@ -67,7 +67,7 @@ export interface IPageQueryRestOfName extends IPageQuery {
 }
 export interface IPageQueryResult<T> {
     keyWords: string,
-    data: ObservableMap<observablePromise.PramsResult<T>>
+    data: ObservableMap<ObservablePromiseModel<T>>
 }
 const SearchPageQuery = debounce((fn: () => void) => {
     setTimeout(() => {
@@ -123,6 +123,7 @@ export function pagingQueryProcessing<T = {}>(options: IPageQueryObject | IPageQ
                 };
                 return state
             },(state,reaction) => {
+                // @ts-ignore
                 store.data.set(options.mapItemKeys,state)
                 store.keyWords = options.keyWords;
                 if (state.state === 'resolved') {
