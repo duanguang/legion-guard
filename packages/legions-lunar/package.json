@@ -39,8 +39,6 @@
     "@types/react": "^15.6.6",
     "@types/react-dom": "^0.14.22",
     "legions-rpc-cli": "^0.0.8",
-    "@commitlint/cli": "^7.3.2",
-    "@commitlint/config-conventional": "^7.3.1",
     "conventional-changelog-cli":"^2.1.1",
     "antd": "^2.7.4",
     "core-js": "3",
@@ -48,7 +46,6 @@
     "brain-store": "^0.2.0",
     "brain-store-utils": "^0.2.0",
     "history": "^4.7.2",
-    "husky": "^1.3.1",
     "invariant": "^2.2.1",
     "mobx": "^3.6.2",
     "object-hash": "^1.3.0",
@@ -80,11 +77,6 @@
     "not ie <= 9",
     "not op_mini all"
   ],
-  "husky": {
-    "hooks": {
-        "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
-    }
-},
   "scripts": {
     "test": "jest",
     "build": "cross-env  legions-rpc rpc -c && yarn release",
