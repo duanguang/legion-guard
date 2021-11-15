@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-typeScriptModules=("antd-toolkit" "legion.plugin.sdk" 
+typeScriptModules=("antd-toolkit" "dw.report" 
 "mobx-decorator" "model" "object-hash" "schedule" "warning")
 echo "-----------------开始生成TypeScript约束文件------------------------
 "

@@ -96,18 +96,18 @@ const vmodel = [
     },
   },
 ];
-const legionpluginsdk = [
+const dwreport = [
   {
     name: 'esmlegionpluginsdk',
-    input: resolves('src/legion.plugin.sdk/index.tsx'),
-    file: resolves('legion.plugin.sdk/index.js'),
+    input: resolves('src/dw.report/index.ts'),
+    file: resolves('dw.report/index.js'),
     format: 'es',
     banner: 'legions-lunar',
     outputName: 'legionsMobxDecorator',
   },
 ];
 const entitys = {
-  /* legionpluginsdk, */
+  dwreport,
   vmodel,
   schedule,
   warning,
@@ -134,6 +134,7 @@ module.exports = {
     'lodash',
     'object-hash',
     'legions-thirdparty-plugin',
+    'legions-utils-tool',
     /*  'legions-lunar', */
     /* path.resolve('./src/antd-toolkit/index.ts'),
      path.resolve('./src/warning/index.ts'),
