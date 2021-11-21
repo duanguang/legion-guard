@@ -1,5 +1,5 @@
 /**
-  * legions-lunar v0.0.8
+  * legions-lunar v0.0.9
   * (c) 2021 duanguang
   * @license MIT
   */
@@ -309,7 +309,7 @@ var BrowserMatch = {
 var LoggerManager = {
     consoleLog: function (options) {
         var logConent = options.logConent || {};
-        console.log({ value: __assign({}, logConent), type: options });
+        console.warn("" + options.type, logConent);
     },
     /** 采集数据上报到数仓 */
     report: function (options, reportApi) {

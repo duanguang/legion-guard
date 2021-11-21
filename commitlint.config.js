@@ -13,7 +13,8 @@ module.exports = {
             'refactor',
             'revert',
             'style',
-            'test'
+            'test',
+            "release"
         ]],
         // 'subject-full-stop': [0, 'never'],
         // 'subject-case': [0, 'never']

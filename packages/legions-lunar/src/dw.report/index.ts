@@ -1,7 +1,7 @@
 import { BrowserMatch } from 'legions-utils-tool/browser'
 interface ILoggerManagerConsoleLog {
     type: string;
-    logConent?: string;
+    logConent?: any;
     /**  */
 }
 interface IReportApi {
@@ -38,7 +38,7 @@ interface ILoggerManagerReport
 export const LoggerManager = {
     consoleLog: (options: ILoggerManagerConsoleLog) => {
         const logConent = options.logConent || {};
-        console.log({ value: { ...logConent },type: options })
+        console.warn(`${options.type}`,logConent)
     },
     /** 采集数据上报到数仓 */
     report: (options: ILoggerManagerReport,

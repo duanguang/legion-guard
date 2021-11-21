@@ -1,6 +1,6 @@
 interface ILoggerManagerConsoleLog {
     type: string;
-    logConent?: string;
+    logConent?: any;
 }
 interface IReportApi {
     api: (params: {
